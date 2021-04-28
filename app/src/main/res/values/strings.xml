@@ -1,3 +1,18 @@
 <resources>
     <string name="app_name">MoneyMate</string>
+    <string name="txt_1">Food</string>
+    <string name="txt_2">Transport</string>
+    <string name="txt_3">Fashion</string>
+    <string name="txt_4">Utility Bill</string>
+    <string name="head_1">Budget</string>
+    <string name="txt_sub_1">Rs.10000</string>
+    <string name="txt_sub_2">$$$$$</string>
+    <string name="txt_5">Amount</string>
+    <string name="txt_6">Save</string>
+    <string name="txt_7">Future Savings</string>
+    <string name="txt_8">Add</string>
+    <string name="txt_9">Description</string>
+    <string name="txt_10">Bank Saving</string>
+    <string name="txt_11">Edit</string>
+
 </resources>
