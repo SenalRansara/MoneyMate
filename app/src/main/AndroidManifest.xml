@@ -9,7 +9,12 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.MoneyMate">
-        <activity android:name=".MainActivity">
+        <activity android:name=".new_Account"
+            android:label="New Account"
+            android:parentActivityName=".income"
+            ></activity>
+        <activity android:name=".MainActivity" />
+        <activity android:name=".income">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
