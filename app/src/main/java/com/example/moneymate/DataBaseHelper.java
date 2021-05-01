@@ -2,6 +2,7 @@ package com.example.moneymate;
 
 import android.content.ContentValues;
 import android.content.Context;
+import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 import android.widget.Toast;
@@ -16,14 +17,14 @@ public class DataBaseHelper extends SQLiteOpenHelper {
     private static final int  DATABASE_VERSION = 1;
 
     private static final String TABLE_NAME="Income";
-    private static final String COLUMN_ID ="_id";
+    private static final String COLUMN_ID ="Account_id";
     private static final String COLUMN_TITLE="Account_Name";
     private static final String COLUMN_TYPE ="Account_Type";
     private static final String COLUMN_AMOUNT ="Amount";
 
 
 
-    public DataBaseHelper(@Nullable Context context) {
+     DataBaseHelper(@Nullable Context context) {
         super(context, DATABASE_NAME, null, DATABASE_VERSION);
         this.context=context;
     }
@@ -34,7 +35,7 @@ public class DataBaseHelper extends SQLiteOpenHelper {
         String query = "CREATE TABLE " +TABLE_NAME+ " (" + COLUMN_ID + " INTEGER PRIMARY KEY AUTOINCREMENT, " +
                 COLUMN_TITLE + " TEXT, " +
                 COLUMN_TYPE + " TEXT, " +
-                COLUMN_AMOUNT + " INTEGER);";
+                COLUMN_AMOUNT + " DECIMAL);";
 
         db.execSQL(query);
 
@@ -46,7 +47,8 @@ public class DataBaseHelper extends SQLiteOpenHelper {
         db.execSQL("DROP TABLE IF EXISTS " + TABLE_NAME);
     }
 
-    void addAccount(String Account_Name, String Account_Type, int Amount){
+    //adding new account
+    void addAccount(String Account_Name, String Account_Type, String Amount){
         SQLiteDatabase db =this.getWritableDatabase();
         ContentValues cv = new ContentValues();
 
@@ -61,6 +63,57 @@ public class DataBaseHelper extends SQLiteOpenHelper {
         }else{
             Toast.makeText(context, "Added Successfully",Toast.LENGTH_LONG).show();
         }
+    }
+
+
+    Cursor readAllData(){
+        String query = "SELECT * FROM " + TABLE_NAME;
+        SQLiteDatabase db= this.getReadableDatabase();
+
+        Cursor cursor = null;
+
+        if(db != null){
+           cursor =  db.rawQuery(query, null);
+
+        }
+
+        return cursor;
+
+    }
+
+    void UpdateData(String row_id, String Account_Name, String  Account_Type, String Amount){
+         SQLiteDatabase db = this.getWritableDatabase();
+         ContentValues  cv =new ContentValues();
+         cv.put(COLUMN_TITLE, Account_Name);
+        cv.put(COLUMN_TYPE, Account_Type);
+        cv.put(COLUMN_AMOUNT, Amount);
+
+        long result = db.update(TABLE_NAME, cv, "Account_id=?", new String[]{row_id});
+
+        if(result == -1){
+            Toast.makeText(context, "Update failed ", Toast.LENGTH_SHORT).show();
+        }else{
+            Toast.makeText(context, "Updated Successfully.  ", Toast.LENGTH_SHORT).show();
+        }
+    }
+
+
+
+    void deleteOneRow(String row_id){
+         SQLiteDatabase db = this.getWritableDatabase();
+         long result = db.delete(TABLE_NAME, "Account_id=?", new String[]{row_id});
+         if(result == -1){
+             Toast.makeText(context,"Fail to delete !", Toast.LENGTH_SHORT).show();
+         }else{
+             Toast.makeText(context,"Delete Successfully !", Toast.LENGTH_SHORT).show();
+         }
+    }
+
+
+
+    void deleteAllData(){
+         SQLiteDatabase db = this.getWritableDatabase();
+         db.execSQL("DELETE FROM " + TABLE_NAME);
     }
 
 }

@@ -2,6 +2,7 @@ package com.example.moneymate;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -16,7 +17,7 @@ public class new_Account extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_new__account);
-        
+
         inputAccName = findViewById(R.id.inputAccName);
         inputAccType = findViewById(R.id.inputAccType);
         inputAccBalance = findViewById(R.id.inputAccBalance);
@@ -30,9 +31,19 @@ public class new_Account extends AppCompatActivity {
                 DataBaseHelper myDB = new DataBaseHelper(new_Account.this);
                 myDB.addAccount(inputAccName.getText() .toString() .trim() ,
                         inputAccType .getText() .toString() .trim() ,
-                        Integer.valueOf(inputAccBalance .getText() .toString() .trim()));
+                        inputAccBalance .getText() .toString() .trim());
+
+                /*inputAccName.setText("");
+                inputAccType.setText("");
+                inputAccBalance.setText("");*/
+
+                Intent intent = new Intent(new_Account.this, income.class);
+                startActivity(intent);
+                finish();
 
             }
         });
+
+
     }
 }

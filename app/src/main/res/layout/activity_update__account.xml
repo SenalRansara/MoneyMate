@@ -1,10 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-       xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".new_Account">
+    tools:context=".Update_Account">
+
+
 
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbar2"
@@ -37,7 +39,7 @@
         android:id="@+id/textView2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="NEW ACCOUNT"
+        android:text="ACCOUNT"
         android:textColor="#FFFFFF"
         android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -51,7 +53,7 @@
         android:id="@+id/textView3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="New Account Details"
+        android:text="Account Details"
         android:textSize="30sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -97,7 +99,7 @@
         app:layout_constraintVertical_bias="0.623" />
 
     <EditText
-        android:id="@+id/inputAccName"
+        android:id="@+id/inputAccName2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:ems="10"
@@ -111,7 +113,7 @@
         app:layout_constraintVertical_bias="0.365" />
 
     <EditText
-        android:id="@+id/inputAccType"
+        android:id="@+id/inputAccType2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:ems="10"
@@ -125,7 +127,7 @@
         app:layout_constraintVertical_bias="0.526" />
 
     <EditText
-        android:id="@+id/inputAccBalance"
+        android:id="@+id/inputAccBalance2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:ems="10"
@@ -139,10 +141,10 @@
         app:layout_constraintVertical_bias="0.705" />
 
     <Button
-        android:id="@+id/SaveNewBtn"
+        android:id="@+id/UpdateBtn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Save"
+        android:text="Update"
         android:textAllCaps="false"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -151,4 +153,16 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.812" />
 
+    <Button
+        android:id="@+id/DeleteBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Delete"
+        android:textAllCaps="false"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.482"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.9" />
 </androidx.constraintlayout.widget.ConstraintLayout>
