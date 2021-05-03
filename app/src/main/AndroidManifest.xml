@@ -10,13 +10,13 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MoneyMate">
         <activity android:name=".Transport"></activity>
-        <activity android:name=".Budget" />
+        <activity android:name=".Savings" />
         <activity android:name=".Utility" />
         <activity android:name=".Fashion" />
         <activity android:name=".Food" />
         <activity android:name=".AddSavings"/>
         <activity android:name=".MainActivity" />
-        <activity android:name=".Savings">
+        <activity android:name=".Budget">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
