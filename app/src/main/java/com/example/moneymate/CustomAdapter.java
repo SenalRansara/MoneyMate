@@ -52,7 +52,7 @@ public class CustomAdapter extends RecyclerView.Adapter <CustomAdapter.MyViewHol
 
 
 
-        holder.Acc_id_txt.setText(String.valueOf(Account_id.get(position)));
+        //holder.Acc_id_txt.setText(String.valueOf(Account_id.get(position)));
         holder.Acc_Name_txt.setText(String.valueOf(Account_Name.get(position)));
         holder.Acc_Type_txt.setText(String.valueOf(Account_Type.get(position)));
         holder.Amount_txt.setText(String.valueOf(Amount.get(position)));

@@ -16,11 +16,16 @@ import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import java.util.ArrayList;
 
 public class income extends AppCompatActivity {
+
+    //total income
+//    private TextView totalIncomeResults;
+
 
     RecyclerView recyclerView;
     Button add_btn;
@@ -33,6 +38,8 @@ public class income extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_income);
+
+//        totalIncomeResults = findViewById(R.id.totIncome);
 
         recyclerView = findViewById(R.id.recyclerView);
         add_btn = findViewById(R.id.add_btn);
@@ -55,6 +62,8 @@ public class income extends AppCompatActivity {
         customAdapter =new CustomAdapter(income.this, this, Account_id, Account_Name, Account_Type, Amount);
         recyclerView.setAdapter(customAdapter);
         recyclerView.setLayoutManager(new LinearLayoutManager(income.this));
+
+
 
 
     }
@@ -129,4 +138,11 @@ public class income extends AppCompatActivity {
         builder.create().show();
 
     }
+
+//    void SumIncome(){
+//        float cursor =myDB.sumTotalIncome();
+//
+//
+//
+//    }
 }
