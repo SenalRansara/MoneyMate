@@ -5,6 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#595959"
+    android:foregroundTint="#FFFFFF"
     tools:context=".Choose_category">
 
     <androidx.appcompat.widget.Toolbar
@@ -66,8 +67,75 @@
         app:layout_constraintTop_toBottomOf="@+id/select_category"
         app:layout_constraintVertical_bias="0.106" />
 
-    <ImageView
+    <Button
         android:id="@+id/food_select"
+        android:layout_width="135dp"
+        android:layout_height="144dp"
+        android:backgroundTint="#00FFFFFF"
+        android:shadowColor="#00FFFFFF"
+        android:text="Food"
+        android:textColor="#00FFFFFF"
+        android:textColorHighlight="#00FFFFFF"
+        android:textColorHint="#00FFFFFF"
+        android:textColorLink="#00FFFFFF"
+        app:cornerRadius="120dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.134"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/food_topic"
+        app:layout_constraintVertical_bias="0.002"
+        app:rippleColor="#00FFFFFF" />
+
+    <Button
+        android:id="@+id/travel_select"
+        android:layout_width="135dp"
+        android:layout_height="144dp"
+        android:backgroundTint="#00FFFFFF"
+        android:text="Travel"
+        android:textColor="#00FFFFFF"
+        app:cornerRadius="120dp"
+        app:iconTint="#FFFFFF"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.629"
+        app:layout_constraintStart_toEndOf="@+id/food_select"
+        app:layout_constraintTop_toBottomOf="@+id/travel_topic"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <Button
+        android:id="@+id/shopping_select"
+        android:layout_width="135dp"
+        android:layout_height="144dp"
+        android:backgroundTint="#00FFFFFF"
+        android:text="Shopping"
+        android:textColor="#00FFFFFF"
+        app:cornerRadius="120dp"
+        app:iconTint="#FFFFFF"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.134"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/shopping_topic"
+        app:layout_constraintVertical_bias="0.029" />
+
+    <Button
+        android:id="@+id/utility_select"
+        android:layout_width="135dp"
+        android:layout_height="144dp"
+        android:backgroundTint="#00FFFFFF"
+        android:text="Utility"
+        android:textColor="#00FFFFFF"
+        app:cornerRadius="120dp"
+        app:iconTint="#FFFFFF"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.629"
+        app:layout_constraintStart_toEndOf="@+id/shopping_select"
+        app:layout_constraintTop_toBottomOf="@+id/utility_topic"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <ImageView
         android:layout_width="150dp"
         android:layout_height="150dp"
         android:layout_marginStart="30dp"
@@ -76,7 +144,7 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/food_topic"
-        app:layout_constraintVertical_bias="0.004"
+        app:layout_constraintVertical_bias="0.0"
         app:srcCompat="@drawable/ic_launcher_cat1" />
 
     <TextView
@@ -96,7 +164,6 @@
         app:layout_constraintVertical_bias="0.108" />
 
     <ImageView
-        android:id="@+id/travel_select"
         android:layout_width="150dp"
         android:layout_height="150dp"
         android:layout_marginEnd="30dp"
@@ -126,7 +193,6 @@
         app:layout_constraintVertical_bias="0.217" />
 
     <ImageView
-        android:id="@+id/shopping_select"
         android:layout_width="150dp"
         android:layout_height="150dp"
         android:layout_marginStart="30dp"
@@ -152,7 +218,6 @@
         app:layout_constraintVertical_bias="0.219" />
 
     <ImageView
-        android:id="@+id/utility_select"
         android:layout_width="150dp"
         android:layout_height="150dp"
         android:layout_marginEnd="30dp"

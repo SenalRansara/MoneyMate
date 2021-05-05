@@ -2,7 +2,9 @@ package com.example.moneymate;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -22,6 +24,11 @@ public class add_new_expense extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_add_expense);
 
+        String category = getIntent().getStringExtra("category");
+        String account = getIntent().getStringExtra("account");
+        Log.d("category",category);
+        Log.d("Account",account);
+
 //        date_input = findViewById((R.id.date_input);
 //        category_input = findViewById((R.id.category_input);
 //        account_input = findViewById((R.id.account_input);
@@ -31,9 +38,10 @@ public class add_new_expense extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Database myDB = new Database(add_new_expense.this);
-                myDB.addExpense(amount.getText().toString().trim());
+                myDB.addExpense(category,account,amount.getText().toString().trim());
 
-
+                Intent intent = new Intent(getApplicationContext(), MainActivity.class);
+                startActivity(intent);
             }
         });
 

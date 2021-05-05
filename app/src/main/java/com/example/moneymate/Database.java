@@ -23,6 +23,11 @@ class Database extends SQLiteOpenHelper {
     private static final String COLUMN_ACCOUNT = "Account";
     private static final String COLUMN_AMOUNT = "Amount";
 
+    public static final String newQuery = "CREATE TABLE " + "Income " + " (" + "Account_id" + " INTEGER PRIMARY KEY AUTOINCREMENT," +
+    "Account_Name" + " TEXT," +
+    "Account_Type" + " TEXT," +
+    "Account_Amount" + " TEXT);";
+
 
     public Database(@Nullable Context context) {
         super(context, DATABASE_NAME, null, DATABASE_VERSION);
@@ -34,9 +39,10 @@ class Database extends SQLiteOpenHelper {
 
         String query =
                 "CREATE TABLE " + TABLE_NAME +
-                        "(" + COLUMN_ID + " INTEGER PRIMARY KEY AUTOINCREMENT, " +
-                        COLUMN_CATEGORY + "STRING" + COLUMN_AMOUNT + " NUMERIC(5,2)); " ;
+                        "(" + COLUMN_ID + " INTEGER PRIMARY KEY AUTOINCREMENT," +
+                        COLUMN_CATEGORY + " TEXT," + COLUMN_ACCOUNT + " TEXT," + COLUMN_AMOUNT + " NUMERIC(5,2));" ;
         db.execSQL(query);
+        db.execSQL(newQuery);
     }
 
     @Override
@@ -47,10 +53,12 @@ class Database extends SQLiteOpenHelper {
 
     }
 
-    void addExpense (String amount) {
+    void addExpense (String category,String account, String amount) {
         SQLiteDatabase db = this.getWritableDatabase();
         ContentValues cv = new ContentValues();
 
+        cv.put(COLUMN_CATEGORY, category);
+        cv.put(COLUMN_ACCOUNT,account);
         cv.put(COLUMN_AMOUNT, amount);
 
         long result = db.insert (TABLE_NAME, null, cv);
@@ -70,4 +78,16 @@ class Database extends SQLiteOpenHelper {
         }
         return  cursor;
     }
+
+    Cursor readAccountTable(){
+        String query = "SELECT * FROM Income";
+        SQLiteDatabase db = this.getWritableDatabase();
+
+        Cursor cursor = null;
+        if(db != null){
+            cursor = db.rawQuery(query,null);
+        }
+        return cursor;
+   }
+
 }
