@@ -17,6 +17,7 @@ import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -26,6 +27,7 @@ public class income extends AppCompatActivity {
 
     //total income
     TextView txtBalance;
+    ImageButton Shopping;
 
 
     RecyclerView recyclerView;
@@ -48,6 +50,8 @@ public class income extends AppCompatActivity {
         add_btn = findViewById(R.id.add_btn);
         txtBalance = findViewById(R.id.txtBalance);
 
+        Shopping = findViewById(R.id.Shopping);
+
 
         myDB = new DataBaseHelper(getApplicationContext());
         float total = myDB.sumTotalIncome();
@@ -56,14 +60,23 @@ public class income extends AppCompatActivity {
 
         txtBalance.setText(String.valueOf(total));
 
-        add_btn.setOnClickListener(new View.OnClickListener() {
 
+        //TOOLBAR BUTTON SET
+//        Shopping.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                Intent intent = new Intent(income.this, new_Account.class);
+//                startActivity(intent);
+//            }
+//        });
+
+        add_btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(income.this, new_Account.class);
-                startActivity(intent);
-            }
-        });
+                        Intent intent = new Intent(income.this, new_Account.class);
+                        startActivity(intent);
+                    }
+                });
 
         //initializing  method
         myDB = new DataBaseHelper(income.this);

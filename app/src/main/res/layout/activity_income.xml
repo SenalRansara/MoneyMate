@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#E2D3C8C8"
+    android:background="#E2C8C9D3"
     tools:context=".income">
 
     <androidx.appcompat.widget.Toolbar
@@ -161,7 +161,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="32dp"
+        android:background="#FFFFFF"
         android:textSize="18sp"
+        android:textStyle="bold"
         app:layout_constraintBaseline_toBaselineOf="@+id/textView11"
         app:layout_constraintEnd_toEndOf="parent" />
 
@@ -171,8 +173,9 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
         android:layout_marginTop="16dp"
-        android:text="Your total account balance is : "
+        android:text="Your Total Account Balance Is  : "
         android:textSize="18sp"
+        android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/toolbar" />
 
