@@ -144,8 +144,8 @@
 
     <Button
         android:id="@+id/utility_select"
-        android:layout_width="135dp"
-        android:layout_height="144dp"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
         android:alpha="0"
         android:backgroundTint="#00FFFFFF"
         android:text="Utility"
@@ -154,10 +154,10 @@
         app:iconTint="#FFFFFF"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.568"
+        app:layout_constraintHorizontal_bias="0.616"
         app:layout_constraintStart_toEndOf="@+id/shopping_select"
         app:layout_constraintTop_toBottomOf="@+id/utility_topic"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintVertical_bias="0.056" />
 
     <TextView
         android:id="@+id/travel_topic"
@@ -228,7 +228,7 @@
     <ImageView
         android:layout_width="150dp"
         android:layout_height="150dp"
-        android:layout_marginTop="4dp"
+        android:layout_marginTop="12dp"
         android:layout_marginEnd="28dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/utility_topic"
