@@ -171,7 +171,7 @@
         android:id="@+id/textView11"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="32dp"
+        android:layout_marginStart="36dp"
         android:layout_marginTop="16dp"
         android:text="Your Total Account Balance Is  : "
         android:textSize="18sp"
