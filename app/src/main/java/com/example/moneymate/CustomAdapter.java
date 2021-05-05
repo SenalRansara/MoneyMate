@@ -20,14 +20,18 @@ import java.util.ArrayList;
 
 public class CustomAdapter extends RecyclerView.Adapter <CustomAdapter.MyViewHolder> {
 
+
     private Context context;
     Activity activity;
+
+    //4 array lists
     private ArrayList Account_id, Account_Name, Account_Type, Amount;
 
     Animation display_anim;
 
 
 
+    //constructor
     CustomAdapter(Activity activity, Context context, ArrayList Account_id, ArrayList Account_Name, ArrayList Account_Type, ArrayList Amount ){
 
         this.activity = activity;
@@ -42,6 +46,8 @@ public class CustomAdapter extends RecyclerView.Adapter <CustomAdapter.MyViewHol
     @NonNull
     @Override
     public MyViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+
+        //inflate method
         LayoutInflater inflater = LayoutInflater.from(context);
         View view = inflater.inflate(R.layout.my_row, parent, false);
         return new MyViewHolder(view);
@@ -80,8 +86,11 @@ public class CustomAdapter extends RecyclerView.Adapter <CustomAdapter.MyViewHol
 
     public class MyViewHolder extends RecyclerView.ViewHolder {
 
+        //text view objects
         TextView Acc_id_txt, Acc_Name_txt, Acc_Type_txt, Amount_txt;
         LinearLayout mainLayout;
+
+        //constructor
         public MyViewHolder(@NonNull View itemView) {
             super(itemView);
             Acc_id_txt =itemView.findViewById(R.id.Acc_id_txt);

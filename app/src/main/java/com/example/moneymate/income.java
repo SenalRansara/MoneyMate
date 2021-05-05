@@ -11,6 +11,7 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.database.Cursor;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
@@ -24,13 +25,15 @@ import java.util.ArrayList;
 public class income extends AppCompatActivity {
 
     //total income
-//    private TextView totalIncomeResults;
+    TextView txtBalance;
 
 
     RecyclerView recyclerView;
     Button add_btn;
 
+    //create object from DataBaseHelper class
     DataBaseHelper myDB;
+    //create array list which contain these string values
     ArrayList<String> Account_id, Account_Name, Account_Type, Amount;
     CustomAdapter customAdapter;
 
@@ -43,6 +46,16 @@ public class income extends AppCompatActivity {
 
         recyclerView = findViewById(R.id.recyclerView);
         add_btn = findViewById(R.id.add_btn);
+        txtBalance = findViewById(R.id.txtBalance);
+
+
+        myDB = new DataBaseHelper(getApplicationContext());
+        float total = myDB.sumTotalIncome();
+
+        Log.d("<<<<<<<<<<<<<<<<<<",String.valueOf(total));
+
+        txtBalance.setText(String.valueOf(total));
+
         add_btn.setOnClickListener(new View.OnClickListener() {
 
             @Override
@@ -52,7 +65,10 @@ public class income extends AppCompatActivity {
             }
         });
 
+        //initializing  method
         myDB = new DataBaseHelper(income.this);
+
+        //initializing array list
         Account_id = new ArrayList<>();
         Account_Name = new ArrayList<>();
         Account_Type = new ArrayList<>();
@@ -78,13 +94,24 @@ public class income extends AppCompatActivity {
         }
     }
 
+
+
     void displayData(){
 
+
+        //store result value from in realAllData method in cursor object
         Cursor cursor =myDB.readAllData();
+
+        //checking there is no data
         if(cursor.getCount() == 0){
+
+            //display toast msg
             Toast.makeText(this, "No data.", Toast.LENGTH_SHORT ).show();
         }else{
+
            while (cursor.moveToNext()) {
+
+               //read al data
                 Account_id.add(cursor.getString(0));
                Account_Name.add(cursor.getString(1));
                Account_Type.add(cursor.getString(2));
@@ -138,11 +165,4 @@ public class income extends AppCompatActivity {
         builder.create().show();
 
     }
-
-//    void SumIncome(){
-//        float cursor =myDB.sumTotalIncome();
-//
-//
-//
-//    }
 }

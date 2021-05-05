@@ -5,16 +5,21 @@ import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.DialogInterface;
+import android.database.Cursor;
 import android.os.Bundle;
+import android.provider.ContactsContract;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
 public class Update_Account extends AppCompatActivity {
 
 
     EditText inputAccName, inputAccType, inputAccBalance;
+    TextView AccRem;
     Button UpdateBtn,DeleteBtn;
 
     String Account_id, Account_Name, Account_Type, Amount;
@@ -24,6 +29,7 @@ public class Update_Account extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_update__account);
 
+        AccRem = findViewById(R.id.AccRem);
         inputAccName = findViewById(R.id.inputAccName2);
         inputAccType =  findViewById(R.id.inputAccType2);
         inputAccBalance =  findViewById(R.id.inputAccBalance2);
@@ -31,6 +37,15 @@ public class Update_Account extends AppCompatActivity {
         DeleteBtn =findViewById(R.id.DeleteBtn);
 
         getAndSetIntentData();
+
+        DataBaseHelper dbHelper = new DataBaseHelper(Update_Account.this);
+        Float expense = dbHelper.remBalance(Account_Name);
+
+        Float RemBal = Float.valueOf(Amount) - expense;
+
+        Log.d("totallllllll",String.valueOf(RemBal));
+
+        AccRem.setText(String.valueOf(RemBal));
 
         ActionBar ab =getSupportActionBar();
         if (ab != null) {
@@ -43,6 +58,7 @@ public class Update_Account extends AppCompatActivity {
             Account_Type = inputAccType.getText().toString().trim();
             Amount =  inputAccBalance.getText().toString().trim();
             db.UpdateData(Account_id, Account_Name, Account_Type, Amount);
+            finish();
         });
 
 

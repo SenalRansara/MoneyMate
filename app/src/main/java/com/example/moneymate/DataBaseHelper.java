@@ -5,6 +5,7 @@ import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
+import android.util.Log;
 import android.widget.Toast;
 
 import androidx.annotation.Nullable;
@@ -16,7 +17,7 @@ public class DataBaseHelper extends SQLiteOpenHelper {
     private static final String DATABASE_NAME= "MoneyMate.db";
     private static final int  DATABASE_VERSION = 1;
 
-    //databse table name
+    //database table name
     private static final String TABLE_NAME="Income";
 
     //database column names
@@ -81,13 +82,20 @@ public class DataBaseHelper extends SQLiteOpenHelper {
     }
 
 
+    //read all data from database
     Cursor readAllData(){
         String query = "SELECT * FROM " + TABLE_NAME;
+        //create sqlite database object
+        //access getReadableDatabase method
         SQLiteDatabase db= this.getReadableDatabase();
 
+        //create cursor object
         Cursor cursor = null;
 
+        //checking there is any data in database
         if(db != null){
+
+            //insert raw query data in cursor object
            cursor =  db.rawQuery(query, null);
 
         }
@@ -133,18 +141,29 @@ public class DataBaseHelper extends SQLiteOpenHelper {
          db.execSQL("DELETE FROM SQLITE_SEQUENCE WHERE NAME = '" + TABLE_NAME + "'");
     }
 
-//   public float sumTotalIncome(){
-//         float val =0;
-//        SQLiteDatabase db = this.getWritableDatabase();
-//        Cursor cursor = db.rawQuery("SELECT SUM ("+ COLUMN_AMOUNT +") FROM " + TABLE_NAME , null);
-//        if(cursor.moveToFirst())
-//            val = cursor.getInt(0);
-//            cursor.close();
-//            db.close();
-//            return val;
-//
-//
-//    }
+   public float sumTotalIncome(){
+
+        SQLiteDatabase db = this.getWritableDatabase();
+        //return(db.execSQL("SELECT SUM ("+ COLUMN_AMOUNT +") FROM " + TABLE_NAME));
+
+       Cursor c = db.rawQuery("SELECT SUM ("+ COLUMN_AMOUNT +") FROM " + TABLE_NAME,null);
+       c.moveToFirst();
+       float i = c.getFloat(0);
+       c.close();
+       return i;
+
+    }
+
+    public float remBalance(String accName){
+
+        SQLiteDatabase db = this.getWritableDatabase();
+         Cursor c1 = db.rawQuery("SELECT SUM (Amount) FROM expenses WHERE Account LIKE " + "'" + accName + "'",null);
+        c1.moveToFirst();
+        Float income = c1.getFloat(0);
+        c1.close();
+
+        return income;
+    }
 
 
 }
