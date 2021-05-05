@@ -24,6 +24,15 @@ public class add_new_expense extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_add_expense);
 
+        String date_n = new SimpleDateFormat("MMM dd, yyyy", Locale.getDefault()).format(new Date());
+
+        TextView tv_date  = (TextView) findViewById(R.id.dateShow);
+        tv_date.setText(date_n);
+
+        String date = tv_date.getText().toString();
+
+        Log.d("date>>>>>>>>>>>",date);
+
         String category = getIntent().getStringExtra("category");
         String account = getIntent().getStringExtra("account");
         Log.d("category",category);
@@ -38,16 +47,13 @@ public class add_new_expense extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Database myDB = new Database(add_new_expense.this);
-                myDB.addExpense(category,account,amount.getText().toString().trim());
+                myDB.addExpense(category,account,date,amount.getText().toString().trim());
 
                 Intent intent = new Intent(getApplicationContext(), MainActivity.class);
                 startActivity(intent);
             }
         });
 
-        String date_n = new SimpleDateFormat("MMM dd, yyyy", Locale.getDefault()).format(new Date());
 
-        TextView tv_date  = (TextView) findViewById(R.id.dateShow);
-        tv_date.setText(date_n);
     }
 }

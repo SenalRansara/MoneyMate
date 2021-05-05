@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#595959"
+    android:background="#FFFFFF"
     android:foregroundTint="#FFFFFF"
     tools:context=".Choose_category">
 
@@ -12,7 +12,7 @@
         android:id="@+id/select_category"
         android:layout_width="match_parent"
         android:layout_height="55dp"
-        android:background="#01C16D"
+        android:background="#673AB7"
         android:minHeight="?attr/actionBarSize"
         android:theme="?attr/actionBarTheme"
         android:touchscreenBlocksFocus="true"
@@ -24,6 +24,19 @@
         app:layout_constraintVertical_bias="0.002"
         app:titleTextAppearance="@style/TextAppearance.AppCompat.Display1"
         app:titleTextColor="#FFFFFF" />
+
+
+    <ImageView
+        android:id="@+id/imageView5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:alpha="0.12"
+        app:layout_constraintBottom_toBottomOf="@+id/Shopping"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/moneylogso" />
 
     <ImageView
         android:id="@+id/category_logo"
@@ -58,20 +71,19 @@
         android:layout_marginStart="30dp"
         android:gravity="center"
         android:text="Food"
-        android:textColor="#FFFFFF"
+        android:textColor="#000000"
         android:textSize="24sp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBaseline_toBaselineOf="@+id/travel_topic"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/select_category"
-        app:layout_constraintVertical_bias="0.106" />
+        app:layout_constraintStart_toStartOf="parent" />
 
     <Button
         android:id="@+id/food_select"
         android:layout_width="135dp"
         android:layout_height="144dp"
-        android:backgroundTint="#00FFFFFF"
+        android:alpha="0."
+        android:backgroundTint="#00000000"
         android:shadowColor="#00FFFFFF"
         android:text="Food"
         android:textColor="#00FFFFFF"
@@ -87,10 +99,20 @@
         app:layout_constraintVertical_bias="0.002"
         app:rippleColor="#00FFFFFF" />
 
+    <ImageView
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/food_topic"
+        app:srcCompat="@drawable/ic_launcher_cat1" />
+
     <Button
         android:id="@+id/travel_select"
-        android:layout_width="135dp"
-        android:layout_height="144dp"
+        android:layout_width="143dp"
+        android:layout_height="143dp"
+        android:alpha="0"
         android:backgroundTint="#00FFFFFF"
         android:text="Travel"
         android:textColor="#00FFFFFF"
@@ -98,7 +120,7 @@
         app:iconTint="#FFFFFF"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.629"
+        app:layout_constraintHorizontal_bias="0.525"
         app:layout_constraintStart_toEndOf="@+id/food_select"
         app:layout_constraintTop_toBottomOf="@+id/travel_topic"
         app:layout_constraintVertical_bias="0.0" />
@@ -107,6 +129,7 @@
         android:id="@+id/shopping_select"
         android:layout_width="135dp"
         android:layout_height="144dp"
+        android:alpha="0"
         android:backgroundTint="#00FFFFFF"
         android:text="Shopping"
         android:textColor="#00FFFFFF"
@@ -123,6 +146,7 @@
         android:id="@+id/utility_select"
         android:layout_width="135dp"
         android:layout_height="144dp"
+        android:alpha="0"
         android:backgroundTint="#00FFFFFF"
         android:text="Utility"
         android:textColor="#00FFFFFF"
@@ -130,22 +154,10 @@
         app:iconTint="#FFFFFF"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.629"
+        app:layout_constraintHorizontal_bias="0.647"
         app:layout_constraintStart_toEndOf="@+id/shopping_select"
         app:layout_constraintTop_toBottomOf="@+id/utility_topic"
-        app:layout_constraintVertical_bias="0.0" />
-
-    <ImageView
-        android:layout_width="150dp"
-        android:layout_height="150dp"
-        android:layout_marginStart="30dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/food_topic"
-        app:layout_constraintVertical_bias="0.0"
-        app:srcCompat="@drawable/ic_launcher_cat1" />
+        app:layout_constraintVertical_bias="0.418" />
 
     <TextView
         android:id="@+id/travel_topic"
@@ -154,7 +166,7 @@
         android:layout_marginEnd="30dp"
         android:gravity="center"
         android:text="Travel"
-        android:textColor="#FFFFFF"
+        android:textColor="#000000"
         android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -164,16 +176,13 @@
         app:layout_constraintVertical_bias="0.108" />
 
     <ImageView
+        android:id="@+id/imageView6"
         android:layout_width="150dp"
         android:layout_height="150dp"
-        android:layout_marginEnd="30dp"
-        android:layout_marginBottom="288dp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginTop="72dp"
+        android:layout_marginEnd="28dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toEndOf="@+id/food_select"
-        app:layout_constraintTop_toBottomOf="@+id/select_category"
-        app:layout_constraintVertical_bias="0.423"
+        app:layout_constraintTop_toTopOf="@+id/travel_select"
         app:srcCompat="@mipmap/ic_launcher_cat2" />
 
     <TextView
@@ -181,89 +190,47 @@
         android:layout_width="150dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="30dp"
+        android:layout_marginTop="80dp"
         android:gravity="center"
         android:text="Shopping"
-        android:textColor="#FFFFFF"
+        android:textColor="#000000"
         android:textSize="24sp"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/food_select"
-        app:layout_constraintVertical_bias="0.217" />
+        app:layout_constraintTop_toBottomOf="@+id/food_select" />
 
     <ImageView
         android:layout_width="150dp"
         android:layout_height="150dp"
-        android:layout_marginStart="30dp"
-        android:layout_marginBottom="156dp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="8dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/shopping_select"
         app:srcCompat="@mipmap/ic_launcher_cat3" />
 
     <TextView
         android:id="@+id/utility_topic"
         android:layout_width="150dp"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="30dp"
         android:gravity="center"
         android:text="Utility Bills"
-        android:textColor="#FFFFFF"
+        android:textColor="#000000"
         android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/travel_select"
-        app:layout_constraintVertical_bias="0.219" />
+        app:layout_constraintTop_toBottomOf="@+id/imageView6"
+        app:layout_constraintVertical_bias="0.182"
+        tools:layout_editor_absoluteX="215dp" />
 
     <ImageView
         android:layout_width="150dp"
         android:layout_height="150dp"
-        android:layout_marginEnd="30dp"
-        android:layout_marginBottom="44dp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginTop="92dp"
+        android:layout_marginEnd="28dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toEndOf="@+id/shopping_select"
         app:layout_constraintTop_toBottomOf="@+id/utility_topic"
-        app:layout_constraintVertical_bias="0.0"
         app:srcCompat="@mipmap/ic_launcher_cat4" />
-
-    <Button
-        android:id="@+id/category_back"
-        android:layout_width="205dp"
-        android:layout_height="55dp"
-        android:backgroundTint="#01C16D"
-        android:text="Back"
-        android:textSize="24sp"
-        app:cornerRadius="0dp"
-        app:icon="@drawable/ic_baseline_arrow_back_ios_new_24"
-        app:iconGravity="start"
-        app:iconPadding="-25dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/shopping_select"
-        app:layout_constraintVertical_bias="1.0" />
-
-    <Button
-        android:id="@+id/category_next"
-        android:layout_width="205dp"
-        android:layout_height="55dp"
-        android:backgroundTint="#01C16D"
-        android:text="Next"
-        android:textSize="24sp"
-        app:cornerRadius="0dp"
-        app:icon="@drawable/ic_baseline_arrow_forward_ios_24"
-        app:iconGravity="end"
-        app:iconPadding="-25dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/toolbar3"
-        app:layout_constraintVertical_bias="1.0" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

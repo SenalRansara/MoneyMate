@@ -4,8 +4,19 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#595959"
+    android:background="#FFFFFF"
     tools:context=".MainActivity">
+
+    <ImageView
+        android:id="@+id/imageView5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:alpha="0.12"
+        app:layout_constraintBottom_toBottomOf="@+id/Shopping"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/moneylogso" />
 
     <ImageButton
         android:id="@+id/Food"
@@ -141,7 +152,7 @@
         android:layout_width="43dp"
         android:layout_height="47dp"
         android:text="Rs."
-        android:textColor="#FFFFFF"
+        android:textColor="#000000"
         android:textSize="30sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -155,7 +166,7 @@
         android:layout_width="43dp"
         android:layout_height="47dp"
         android:text="Rs."
-        android:textColor="#FFFFFF"
+        android:textColor="#000000"
         android:textSize="30sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -169,7 +180,7 @@
         android:layout_width="43dp"
         android:layout_height="47dp"
         android:text="Rs."
-        android:textColor="#FFFFFF"
+        android:textColor="#000000"
         android:textSize="30sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -183,7 +194,7 @@
         android:layout_width="43dp"
         android:layout_height="47dp"
         android:text="Rs."
-        android:textColor="#FFFFFF"
+        android:textColor="#000000"
         android:textSize="30sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -193,11 +204,11 @@
         app:layout_constraintVertical_bias="0.413" />
 
     <TextView
-        android:id="@+id/total_expences_each_cat"
+        android:id="@+id/total_food"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="1500.00"
-        android:textColor="#FFFFFF"
+        android:textColor="#000000"
         android:textSize="36sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -207,45 +218,45 @@
         app:layout_constraintVertical_bias="0.08" />
 
     <TextView
-        android:id="@+id/total_expences_each_cat2"
+        android:id="@+id/total_travel"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="1500.00"
-        android:textColor="#FFFFFF"
+        android:textColor="#000000"
         android:textSize="36sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toEndOf="@+id/currency_type"
-        app:layout_constraintTop_toBottomOf="@+id/total_expences_each_cat"
+        app:layout_constraintTop_toBottomOf="@+id/total_food"
         app:layout_constraintVertical_bias="0.199" />
 
     <TextView
-        android:id="@+id/total_expences_each_cat3"
+        android:id="@+id/total_shopping"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="1500.00"
-        android:textColor="#FFFFFF"
+        android:textColor="#000000"
         android:textSize="36sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toEndOf="@+id/currency_type2"
-        app:layout_constraintTop_toBottomOf="@+id/total_expences_each_cat2"
+        app:layout_constraintTop_toBottomOf="@+id/total_travel"
         app:layout_constraintVertical_bias="0.264" />
 
     <TextView
-        android:id="@+id/total_expences_each_cat4"
+        android:id="@+id/total_utility"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="1500.00"
-        android:textColor="#FFFFFF"
+        android:textColor="#000000"
         android:textSize="36sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toEndOf="@+id/currency_type3"
-        app:layout_constraintTop_toBottomOf="@+id/total_expences_each_cat3"
+        app:layout_constraintTop_toBottomOf="@+id/total_shopping"
         app:layout_constraintVertical_bias="0.411" />
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton

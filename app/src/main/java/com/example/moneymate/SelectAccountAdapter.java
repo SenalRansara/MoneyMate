@@ -8,6 +8,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
@@ -44,6 +45,7 @@ public class SelectAccountAdapter extends RecyclerView.Adapter<SelectAccountAdap
         holder.mainLayout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                Toast.makeText(context," Account selected ",Toast.LENGTH_SHORT).show();
                 Intent intent = new Intent(context,Choose_category.class);
                 intent.putExtra("Account",String.valueOf(accName.get(position)));
                 context.startActivity(intent);
@@ -62,8 +64,8 @@ public class SelectAccountAdapter extends RecyclerView.Adapter<SelectAccountAdap
 
         public AccountViewHolder(@NonNull View itemView) {
             super(itemView);
-            accId = itemView.findViewById(R.id.accId);
-            accName = itemView.findViewById(R.id.accName);
+            accId = itemView.findViewById(R.id.exId);
+            accName = itemView.findViewById(R.id.catName);
             mainLayout = itemView.findViewById(R.id.mainLayout);
         }
     }

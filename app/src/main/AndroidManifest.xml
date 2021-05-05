@@ -10,14 +10,15 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MoneyMate">
         <activity android:name=".Update"></activity>
-        <activity android:name=".TransactionList" />
+
 
 
 
         <activity android:name=".add_new_expense" />
         <activity android:name=".Choose_category" />
-        <activity android:name=".MainActivity" />
-            <activity android:name=".Select_Account" >
+            <activity android:name=".Select_Account" />
+        <activity android:name=".TransactionList" />
+        <activity android:name=".MainActivity" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

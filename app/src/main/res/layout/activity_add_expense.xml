@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#595959">
+    android:background="#FFFFFF">
 
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/select_category2"
@@ -22,6 +22,18 @@
         app:layout_constraintVertical_bias="0.002"
         app:titleTextAppearance="@style/TextAppearance.AppCompat.Display1"
         app:titleTextColor="#FFFFFF" />
+
+
+    <ImageView
+        android:id="@+id/imageView5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:alpha="0.12"
+        app:layout_constraintBottom_toBottomOf="@+id/Shopping"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/moneylogso" />
 
     <TextView
         android:id="@+id/add_amount_topic"
@@ -109,26 +121,8 @@
         app:layout_constraintVertical_bias="0.25" />
 
     <Button
-        android:id="@+id/category_back2"
-        android:layout_width="205dp"
-        android:layout_height="55dp"
-        android:backgroundTint="#01C16D"
-        android:text="Back"
-        android:textSize="24sp"
-        app:cornerRadius="0dp"
-        app:icon="@drawable/ic_baseline_arrow_back_ios_new_24"
-        app:iconGravity="start"
-        app:iconPadding="-25dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/shopping_select"
-        app:layout_constraintVertical_bias="1.0" />
-
-    <Button
         android:id="@+id/confirm_button"
-        android:layout_width="205dp"
+        android:layout_width="410dp"
         android:layout_height="55dp"
         android:backgroundTint="#01C16D"
         android:text="Confirm"

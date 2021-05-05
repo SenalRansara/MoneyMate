@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:layout_gravity="center"
-    android:background="#595959"
+    android:background="#FFFFFF"
     android:textAlignment="center"
     tools:context=".Select_Account">
 
@@ -25,6 +25,19 @@
         app:layout_constraintVertical_bias="0.002"
         app:titleTextAppearance="@style/TextAppearance.AppCompat.Display1"
         app:titleTextColor="#FFFFFF" />
+
+
+    <ImageView
+        android:id="@+id/imageView5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:alpha="0.12"
+        app:layout_constraintBottom_toBottomOf="@+id/Shopping"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/moneylogso" />
+
 
     <ImageView
         android:id="@+id/account_logo"
@@ -56,7 +69,6 @@
         android:id="@+id/toolbar3"
         android:layout_width="380dp"
         android:layout_height="482dp"
-        android:background="@color/teal_700"
         android:minHeight="?attr/actionBarSize"
         android:theme="?attr/actionBarTheme"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -79,42 +91,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/select_account_topic"
         app:layout_constraintVertical_bias="0.036" />
-
-    <Button
-        android:id="@+id/account_back"
-        android:layout_width="205dp"
-        android:layout_height="55dp"
-        android:backgroundTint="#01C16D"
-        android:text="Back"
-        android:textSize="24sp"
-        app:cornerRadius="0dp"
-        app:icon="@drawable/ic_baseline_arrow_back_ios_new_24"
-        app:iconGravity="start"
-        app:iconPadding="-25dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/toolbar3"
-        app:layout_constraintVertical_bias="1.0" />
-
-    <Button
-        android:id="@+id/account_next"
-        android:layout_width="205dp"
-        android:layout_height="55dp"
-        android:backgroundTint="#01C16D"
-        android:text="Next"
-        android:textSize="24sp"
-        app:cornerRadius="0dp"
-        app:icon="@drawable/ic_baseline_arrow_forward_ios_24"
-        app:iconGravity="end"
-        app:iconPadding="-25dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/toolbar3"
-        app:layout_constraintVertical_bias="1.0" />
 
     <ScrollView
         android:layout_width="match_parent"

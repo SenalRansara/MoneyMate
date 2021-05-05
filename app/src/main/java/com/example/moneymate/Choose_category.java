@@ -14,7 +14,7 @@ import android.widget.Toast;
 
 public class Choose_category extends AppCompatActivity {
 
-    Button food_select,travel_select,shopping_select,utility_select,category_next;
+    Button food_select,travel_select,shopping_select,utility_select;
 
     String clickedBtn;
 
@@ -31,13 +31,16 @@ public class Choose_category extends AppCompatActivity {
         shopping_select = findViewById(R.id.shopping_select);
         utility_select = findViewById(R.id.utility_select);
 
-        category_next = findViewById(R.id.category_next);
         food_select.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
 
                 clickedBtn = String.valueOf(food_select.getText());
                 Toast.makeText(getApplicationContext(),"Food Category Selected!",Toast.LENGTH_SHORT).show();
+                Intent intent = new Intent(getApplicationContext(),add_new_expense.class);
+                intent.putExtra("category",clickedBtn);
+                intent.putExtra("account",account);
+                startActivity(intent);
 
             }
         });
@@ -48,6 +51,10 @@ public class Choose_category extends AppCompatActivity {
 
                 clickedBtn = String.valueOf(travel_select.getText());
                 Toast.makeText(getApplicationContext(),"Travel Category Selected!",Toast.LENGTH_SHORT).show();
+                Intent intent = new Intent(getApplicationContext(),add_new_expense.class);
+                intent.putExtra("category",clickedBtn);
+                intent.putExtra("account",account);
+                startActivity(intent);
 
 
             }
@@ -59,6 +66,10 @@ public class Choose_category extends AppCompatActivity {
 
                 clickedBtn = String.valueOf(shopping_select.getText());
                 Toast.makeText(getApplicationContext(),"Shopping Category Selected!",Toast.LENGTH_SHORT).show();
+                Intent intent = new Intent(getApplicationContext(),add_new_expense.class);
+                intent.putExtra("category",clickedBtn);
+                intent.putExtra("account",account);
+                startActivity(intent);
 
 
             }
@@ -70,19 +81,11 @@ public class Choose_category extends AppCompatActivity {
 
                 clickedBtn = String.valueOf(utility_select.getText());
                 Toast.makeText(getApplicationContext(),"Utility Category Selected!",Toast.LENGTH_SHORT).show();
-
-
-            }
-        });
-
-        category_next.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-
                 Intent intent = new Intent(getApplicationContext(),add_new_expense.class);
                 intent.putExtra("category",clickedBtn);
                 intent.putExtra("account",account);
                 startActivity(intent);
+
 
             }
         });

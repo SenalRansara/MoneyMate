@@ -5,6 +5,7 @@ import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
+import android.util.Log;
 import android.widget.Toast;
 
 import androidx.annotation.Nullable;
@@ -40,7 +41,7 @@ class Database extends SQLiteOpenHelper {
         String query =
                 "CREATE TABLE " + TABLE_NAME +
                         "(" + COLUMN_ID + " INTEGER PRIMARY KEY AUTOINCREMENT," +
-                        COLUMN_CATEGORY + " TEXT," + COLUMN_ACCOUNT + " TEXT," + COLUMN_AMOUNT + " NUMERIC(5,2));" ;
+                        COLUMN_CATEGORY + " TEXT," + COLUMN_ACCOUNT + " TEXT," + COLUMN_DATE + " DATE, " + COLUMN_AMOUNT + " NUMERIC(5,2));" ;
         db.execSQL(query);
         db.execSQL(newQuery);
     }
@@ -53,12 +54,13 @@ class Database extends SQLiteOpenHelper {
 
     }
 
-    void addExpense (String category,String account, String amount) {
+    void addExpense (String category,String account, String date, String amount) {
         SQLiteDatabase db = this.getWritableDatabase();
         ContentValues cv = new ContentValues();
 
         cv.put(COLUMN_CATEGORY, category);
         cv.put(COLUMN_ACCOUNT,account);
+        cv.put(COLUMN_DATE,date);
         cv.put(COLUMN_AMOUNT, amount);
 
         long result = db.insert (TABLE_NAME, null, cv);
@@ -89,5 +91,95 @@ class Database extends SQLiteOpenHelper {
         }
         return cursor;
    }
+
+   Cursor searchExpenseRow(String exId){
+
+       String query = "SELECT * FROM " + TABLE_NAME + " WHERE Id LIKE " + "'" + exId + "'";
+       SQLiteDatabase db = this.getWritableDatabase();
+
+       Cursor cursor = null;
+       if(db != null){
+           cursor = db.rawQuery(query,null);
+       }if (cursor.getCount() == 0){
+           Toast.makeText(context,"Sorry no data found!",Toast.LENGTH_SHORT).show();
+       }
+       return cursor;
+   }
+
+   void updateExpenses(String exId, String exCategory,String exAccount,String exAmount){
+        SQLiteDatabase db = this.getWritableDatabase();
+        ContentValues cv = new ContentValues();
+
+        cv.put("Category",exCategory);
+        cv.put("Account",exAccount);
+        cv.put("Amount",exAmount);
+
+       long result = db.update(TABLE_NAME,cv,"Id=?", new String[]{exId});
+       if(result == -1){
+           Toast.makeText(context, "data update failed", Toast.LENGTH_SHORT).show();
+       }else{
+           Toast.makeText(context, "data updated successfully", Toast.LENGTH_SHORT).show();
+       }
+   }
+
+    void deleteExpenseRow(String exId){
+
+
+        Log.d("data came",exId);
+
+        SQLiteDatabase db = this.getWritableDatabase();
+        long result = db.delete(TABLE_NAME,"Id=?",new String[]{exId});
+
+        if(result == -1){
+            Toast.makeText(context, "data deletion failed", Toast.LENGTH_SHORT).show();
+        }else{
+            Toast.makeText(context, "data deleted successfully", Toast.LENGTH_SHORT).show();
+        }
+    }
+
+
+    public float foodTotal(){
+
+        SQLiteDatabase db = this.getWritableDatabase();
+        Cursor c1 = db.rawQuery("SELECT SUM (Amount) FROM " + TABLE_NAME + " WHERE Category LIKE 'Food'",null);
+        c1.moveToFirst();
+        Float Food = c1.getFloat(0);
+        c1.close();
+
+        return Food;
+    }
+
+    public float travelTotal(){
+
+        SQLiteDatabase db = this.getWritableDatabase();
+        Cursor c1 = db.rawQuery("SELECT SUM (Amount) FROM " + TABLE_NAME + " WHERE Category LIKE 'Travel'",null);
+        c1.moveToFirst();
+        Float Travel = c1.getFloat(0);
+        c1.close();
+
+        return Travel;
+    }
+
+    public float shoppingTotal(){
+
+        SQLiteDatabase db = this.getWritableDatabase();
+        Cursor c1 = db.rawQuery("SELECT SUM (Amount) FROM " + TABLE_NAME + " WHERE Category LIKE 'Shopping'",null);
+        c1.moveToFirst();
+        Float Shopping = c1.getFloat(0);
+        c1.close();
+
+        return Shopping;
+    }
+
+    public float utilityTotal(){
+
+        SQLiteDatabase db = this.getWritableDatabase();
+        Cursor c1 = db.rawQuery("SELECT SUM (Amount) FROM " + TABLE_NAME + " WHERE Category LIKE 'Utility'",null);
+        c1.moveToFirst();
+        Float Utility = c1.getFloat(0);
+        c1.close();
+
+        return Utility;
+    }
 
 }
