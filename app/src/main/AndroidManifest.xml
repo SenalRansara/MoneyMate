@@ -9,14 +9,14 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.MoneyMate">
-        <activity android:name=".Transport"></activity>
-        <activity android:name=".Savings" />
+        <activity android:name=".Transport"/>
+        <activity android:name=".Budget" />
         <activity android:name=".Utility" />
         <activity android:name=".Fashion" />
         <activity android:name=".Food" />
         <activity android:name=".AddSavings"/>
         <activity android:name=".MainActivity" />
-        <activity android:name=".Budget">
+        <activity android:name=".Savings">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

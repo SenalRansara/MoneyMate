@@ -59,24 +59,26 @@
         app:layout_constraintTop_toBottomOf="@+id/toolbar2" />
 
     <EditText
-        android:id="@+id/editTextTextPersonName2"
+        android:id="@+id/editText1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="110dp"
         android:layout_marginEnd="25dp"
+        android:hint="10000"
         android:ems="10"
         android:inputType="textPersonName"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/toolbar2" />
 
     <Button
-        android:id="@+id/button6"
+        android:id="@+id/btn_6"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="48dp"
         android:layout_marginEnd="50dp"
         android:backgroundTint="@color/btn"
         android:text="@string/txt_8"
+        android:onClick="AddSavings"
         android:textColor="@color/btn_txt"
         android:textSize="18sp"
         android:textStyle="italic"
@@ -97,11 +99,12 @@
         app:layout_constraintTop_toBottomOf="@+id/toolbar2" />
 
     <EditText
-        android:id="@+id/editTextTextPersonName"
+        android:id="@+id/editText2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="40dp"
         android:layout_marginEnd="25dp"
+        android:hint="Ex:fixed deposit"
         android:ems="10"
         android:inputType="textPersonName"
         app:layout_constraintEnd_toEndOf="parent"

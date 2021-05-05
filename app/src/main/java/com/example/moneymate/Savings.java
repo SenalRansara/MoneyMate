@@ -1,32 +1,62 @@
 package com.example.moneymate;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Intent;
+import android.database.Cursor;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.Toast;
+
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
+
+import java.util.ArrayList;
 
 public class Savings extends AppCompatActivity {
 
-    Button addButton;
+    RecyclerView recyclerView;
+    FloatingActionButton add_btn;
+
+    DbController db;
+   ArrayList<String> id,des,amnt;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_savings);
 
-        addButton = findViewById(R.id.btn_5);
-
-        addButton.setOnClickListener(new View.OnClickListener() {
+        recyclerView = findViewById(R.id.recycler);
+        add_btn = findViewById(R.id.add_button);
+        add_btn.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v) {
-                Intent intent_05 = new Intent(getApplicationContext(),AddSavings.class);
+                Intent intent_05 = new Intent(Savings.this, AddSavings.class);
                 startActivity(intent_05);
-
             }
         });
 
+        db = new DbController(Savings.this);
+        id = new ArrayList<>();
+        des = new ArrayList<>();
+        amnt = new ArrayList<>();
 
+        getData();// me tka iwara kranna
 
     }
+
+    void getData(){
+        Cursor cursor = db.retrieveData();
+        if(cursor.getCount() == 0){
+            Toast.makeText(this,"No Data",Toast.LENGTH_SHORT).show();
+        }else{
+            while(cursor.moveToNext()){
+                id.add(cursor.getString(0));
+                des.add(cursor.getString(1));
+                amnt.add(cursor.getString(2));
+            }
+        }
+    }
+
 }
