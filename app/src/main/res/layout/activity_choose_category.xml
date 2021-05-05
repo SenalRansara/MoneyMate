@@ -220,9 +220,10 @@
         android:textColor="#000000"
         android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/shopping_topic"
         app:layout_constraintTop_toBottomOf="@+id/imageView6"
-        app:layout_constraintVertical_bias="0.155"
-        tools:layout_editor_absoluteX="215dp" />
+        app:layout_constraintVertical_bias="0.155" />
 
     <ImageView
         android:layout_width="150dp"
