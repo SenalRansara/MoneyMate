@@ -1,6 +1,7 @@
 package com.example.moneymate;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Intent;
@@ -20,7 +21,8 @@ public class Savings extends AppCompatActivity {
     FloatingActionButton add_btn;
 
     DbController db;
-   ArrayList<String> id,des,amnt;
+    ArrayList<String> id,des,amount;
+    BudgetAdapter budgetAdapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -40,9 +42,13 @@ public class Savings extends AppCompatActivity {
         db = new DbController(Savings.this);
         id = new ArrayList<>();
         des = new ArrayList<>();
-        amnt = new ArrayList<>();
+        amount = new ArrayList<>();
 
-        getData();// me tka iwara kranna
+        getData();
+
+        budgetAdapter = new BudgetAdapter(Savings.this,id,des,amount);
+        recyclerView.setAdapter(budgetAdapter);
+        recyclerView.setLayoutManager(new LinearLayoutManager(Savings.this));
 
     }
 
@@ -54,7 +60,7 @@ public class Savings extends AppCompatActivity {
             while(cursor.moveToNext()){
                 id.add(cursor.getString(0));
                 des.add(cursor.getString(1));
-                amnt.add(cursor.getString(2));
+                amount.add(cursor.getString(2));
             }
         }
     }

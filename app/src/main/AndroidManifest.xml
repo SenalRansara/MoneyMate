@@ -9,14 +9,20 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.MoneyMate">
-        <activity android:name=".Transport"/>
+        <activity android:name=".UpdateSavings"></activity>
+        <activity android:name=".Transport" />
         <activity android:name=".Budget" />
         <activity android:name=".Utility" />
         <activity android:name=".Fashion" />
         <activity android:name=".Food" />
-        <activity android:name=".AddSavings"/>
+        <activity
+            android:name=".AddSavings"
+            android:label="Add"
+            android:parentActivityName=".Savings" />
         <activity android:name=".MainActivity" />
-        <activity android:name=".Savings">
+        <activity
+            android:name=".Savings"
+            android:label="Future Savings">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
