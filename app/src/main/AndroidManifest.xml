@@ -16,7 +16,6 @@
             android:name=".new_Account"
             android:label="New Account"
             android:parentActivityName=".income" />
-        <activity android:name=".MainActivity" />
         <activity android:name=".income"
             android:label =" MoneyMate">
             <intent-filter>
