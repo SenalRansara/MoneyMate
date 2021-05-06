@@ -21,6 +21,18 @@ public class login extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
 
+        Button btn2 = (Button)findViewById(R.id.ToSignUp);
+
+        btn2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(login.this, signup.class));
+            }
+
+        });
+
+
+
         loginUsername = findViewById(R.id.loginusername);
         loginPassword = findViewById(R.id.loginpassword);
         loginButton = findViewById(R.id.loginbutton);

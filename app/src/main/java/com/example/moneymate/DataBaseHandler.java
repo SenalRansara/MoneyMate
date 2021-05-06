@@ -41,27 +41,20 @@ public class DataBaseHandler extends SQLiteOpenHelper {
         values.put(COL_4 , password);
 
         long result = db.insert(TABLE_NAME , null , values);
-        if(result == -1)
-            return  false;
-        else
-            return true;
-
+        return result != -1;
 
     }
 
     public boolean checkUser(String username , String password){
         SQLiteDatabase db = this.getWritableDatabase();
         String [] columns = { COL_1 };
-        String selection = COL_2 + " and " + COL_4 + "=?";
+        String selection = COL_2 + "=?" + " and " + COL_4 + "=?";
         String [] selectionargs = { username , password};
         Cursor cursor = db.query(TABLE_NAME , columns , selection , selectionargs , null ,null , null);
         int count = cursor.getCount();
         db.close();
         cursor.close();
-        if (count > 0)
-            return true;
-        else
-            return false;
+        return count > 0;
 
     }
 
