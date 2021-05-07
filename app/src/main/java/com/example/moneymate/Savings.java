@@ -1,5 +1,6 @@
 package com.example.moneymate;
 
+import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
@@ -46,9 +47,18 @@ public class Savings extends AppCompatActivity {
 
         getData();
 
-        budgetAdapter = new BudgetAdapter(Savings.this,id,des,amount);
+        budgetAdapter = new BudgetAdapter(Savings.this,this,id,des,amount);
         recyclerView.setAdapter(budgetAdapter);
         recyclerView.setLayoutManager(new LinearLayoutManager(Savings.this));
+
+    }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        if(requestCode == 1){
+            recreate();
+        }
 
     }
 

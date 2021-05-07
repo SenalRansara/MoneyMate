@@ -1,5 +1,6 @@
 package com.example.moneymate;
 
+import android.app.Activity;
 import android.content.ContentValues;
 import android.content.Context;
 import android.content.Intent;
@@ -19,10 +20,12 @@ import java.util.ArrayList;
 public class BudgetAdapter extends RecyclerView.Adapter<BudgetAdapter.ViewData> {
 
     private Context context;
+    Activity activity;
     private ArrayList id,des,amount;
 
 
-        BudgetAdapter(Context context, ArrayList id, ArrayList des, ArrayList amount) {
+        BudgetAdapter(Activity activity,Context context, ArrayList id, ArrayList des, ArrayList amount) {
+        this.activity = activity;
         this.context = context;
         this.id = id;
         this.des = des;
@@ -49,7 +52,7 @@ public class BudgetAdapter extends RecyclerView.Adapter<BudgetAdapter.ViewData> 
                 intent.putExtra("aid",String.valueOf(id.get(position)));
                 intent.putExtra("description",String.valueOf(des.get(position)));
                 intent.putExtra("amnt",String.valueOf(amount.get(position)));
-                context.startActivity(intent);
+                activity.startActivityForResult(intent,1);
             }
         });
         }

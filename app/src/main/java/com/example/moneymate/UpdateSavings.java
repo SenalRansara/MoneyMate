@@ -23,13 +23,22 @@ public class UpdateSavings extends AppCompatActivity {
         des = findViewById(R.id.editText4);
         amount = findViewById(R.id.editText3);
         update_button = findViewById(R.id.update_btn);
+
+        getIntentData();
+
         update_button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
 
+                DbController Db = new DbController(UpdateSavings.this);
+                description = des.getText().toString().trim();
+                amnt = amount.getText().toString().trim();
+                Db.updateData(aid, description, amnt);
+
             }
         });
-        getIntentData();
+
+
     }
 
     void getIntentData(){

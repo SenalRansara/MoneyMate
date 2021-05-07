@@ -22,7 +22,7 @@ public class DbController extends SQLiteOpenHelper {
     private static final String COLUMN_AMOUNT = "amount";
 
 
-    public DbController(@Nullable Context context) {
+    DbController(@Nullable Context context) {
         super(context, DATABASE_NAME, null, DATABASE_VERSION);
         this.context = context;
     }
@@ -60,15 +60,30 @@ public class DbController extends SQLiteOpenHelper {
         }
     }
 
-    Cursor retrieveData(){
+    Cursor retrieveData() {
         String query = "SELECT * FROM " + TABLE_NAME;
         SQLiteDatabase db = this.getReadableDatabase();
 
         Cursor cursor = null;
-        if(db != null){
-            cursor = db.rawQuery(query,null);
+        if (db != null) {
+            cursor = db.rawQuery(query, null);
         }
         return cursor;
     }
 
+    void updateData(String row_id, String des, String amount){
+         SQLiteDatabase db = this.getWritableDatabase();
+         ContentValues cv = new ContentValues();
+
+         cv.put(COLUMN_TITLE, des);
+         cv.put(COLUMN_AMOUNT, amount);
+
+         long result = db.update(TABLE_NAME, cv,"_id=?", new String[]{row_id});
+         if(result == -1){
+             Toast.makeText(context,"Failed to Update!", Toast.LENGTH_SHORT).show();
+         }else{
+             Toast.makeText(context,"Updated Successfully!", Toast.LENGTH_SHORT).show();
+         }
+
+    }
 }
