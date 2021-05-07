@@ -38,7 +38,7 @@ public class CurrencyConverter extends AppCompatActivity {
     Dialog toDialog;
     Button convertButton;
     String convertFromValue, convertToValue , conversionValue;
-    String[] currency = {"EUR" ,"USD", "LKR" , "AUD"};
+    String[] currency = {"EUR" ,"USD", "LKR" , "AUD", "ALL"};
 
 
     @Override
