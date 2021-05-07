@@ -1,4 +1,7 @@
 package com.example.moneymate;
+/* this Page created by Walpola S.R.
+ * IT19965550
+ * */
 
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
@@ -18,6 +21,7 @@ import java.util.ArrayList;
 
 public class Savings extends AppCompatActivity {
 
+    //creating variables
     RecyclerView recyclerView;
     FloatingActionButton add_btn;
 
@@ -30,6 +34,7 @@ public class Savings extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_savings);
 
+        //get the values to variables
         recyclerView = findViewById(R.id.recycler);
         add_btn = findViewById(R.id.add_button);
         add_btn.setOnClickListener(new View.OnClickListener(){
@@ -45,6 +50,7 @@ public class Savings extends AppCompatActivity {
         des = new ArrayList<>();
         amount = new ArrayList<>();
 
+        //calling the get data method
         getData();
 
         budgetAdapter = new BudgetAdapter(Savings.this,this,id,des,amount);
@@ -62,6 +68,7 @@ public class Savings extends AppCompatActivity {
 
     }
 
+    //create a method for get data
     void getData(){
         Cursor cursor = db.retrieveData();
         if(cursor.getCount() == 0){

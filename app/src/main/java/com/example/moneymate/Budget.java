@@ -1,13 +1,20 @@
 package com.example.moneymate;
+/* this Page created by Walpola S.R.
+ * IT19965550
+ * */
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.database.Cursor;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.TextView;
 
 public class Budget extends AppCompatActivity {
+
+    TextView txtFood,txtFashion,txtTransport,txtUtility;
 
     //references for buttons in budget page
     Button buttonOne;
@@ -15,12 +22,44 @@ public class Budget extends AppCompatActivity {
     Button buttonThree;
     Button buttonFour;
 
+    DbController dbController;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_budget);
 
-        //linking the buttons
+        //get the values to the variables
+        txtFood = findViewById(R.id.txtViewFood);
+        txtFashion = findViewById(R.id.txtViewFashion);
+        txtTransport = findViewById(R.id.txtViewTrans);
+        txtUtility = findViewById(R.id.txtViewUtility);
+
+
+        dbController = new DbController(getApplicationContext());
+        Cursor cursor1 = dbController.readFoodBudget();
+        Cursor cursor2 = dbController.readFashionBudget();
+        Cursor cursor3 = dbController.readTransBudget();
+        Cursor cursor4 = dbController.readUtilityBudget();
+
+        if(cursor1.moveToFirst()){
+            txtFood.setText(cursor1.getString(1));
+        }
+
+        if(cursor2.moveToFirst()){
+            txtFashion.setText(cursor2.getString(1));
+        }
+
+        if(cursor3.moveToFirst()){
+            txtTransport.setText(cursor3.getString(1));
+        }
+
+        if(cursor4.moveToFirst()){
+            txtUtility.setText(cursor4.getString(1));
+        }
+
+
+        //linking the buttons for navigate between pages
         buttonOne = findViewById(R.id.btn_1);
         buttonTwo = findViewById(R.id.btn_2);
         buttonThree = findViewById(R.id.btn_3);
@@ -30,7 +69,7 @@ public class Budget extends AppCompatActivity {
         buttonOne.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v) {
-                Intent intent_01 = new Intent(getApplicationContext(),Food.class);
+                Intent intent_01 = new Intent(Budget.this,Food.class);
                 startActivity(intent_01);
             }
         });
@@ -38,7 +77,7 @@ public class Budget extends AppCompatActivity {
         buttonTwo.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v) {
-                Intent intent_02 = new Intent(getApplicationContext(),Fashion.class);
+                Intent intent_02 = new Intent(Budget.this,Fashion.class);
                 startActivity(intent_02);
             }
         });
@@ -46,7 +85,7 @@ public class Budget extends AppCompatActivity {
         buttonThree.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v) {
-                Intent intent_03 = new Intent(getApplicationContext(),Transport.class);
+                Intent intent_03 = new Intent(Budget.this,Transport.class);
                 startActivity(intent_03);
             }
         });
@@ -54,7 +93,7 @@ public class Budget extends AppCompatActivity {
         buttonFour.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v) {
-                Intent intent_04 = new Intent(getApplicationContext(),Utility.class);
+                Intent intent_04 = new Intent(Budget.this,Utility.class);
                 startActivity(intent_04);
             }
         });

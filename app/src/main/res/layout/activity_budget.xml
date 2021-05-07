@@ -5,33 +5,10 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     tools:context=".Budget">
-
-    <androidx.appcompat.widget.Toolbar
-        android:id="@+id/toolbar"
-        android:layout_width="410dp"
-        android:layout_height="60dp"
-        android:background="?attr/colorPrimary"
-        android:backgroundTint="@color/btn"
-        android:minHeight="?attr/actionBarSize"
-        android:theme="?attr/actionBarTheme"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/head_1"
-        android:textColor="@color/black"
-        android:textSize="36sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="@+id/toolbar"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="@+id/toolbar"
-        app:layout_constraintTop_toTopOf="@+id/toolbar" />
-
+    <!--
+    this Page created by Walpola S.R.
+    IT19965550
+    -->
 
 
     <ImageView
@@ -62,7 +39,7 @@
         android:textSize="24sp"
         android:textStyle="bold|italic"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/toolbar" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/btn_2"
@@ -107,48 +84,48 @@
         app:layout_constraintTop_toBottomOf="@+id/btn_3" />
 
     <TextView
-        android:id="@+id/textView2"
+        android:id="@+id/txtViewFood"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="65dp"
+        android:layout_marginTop="55dp"
         android:layout_marginEnd="30dp"
         android:text="@string/txt_sub_2"
-        android:textSize="18sp"
+        android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/toolbar" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/textView3"
+        android:id="@+id/txtViewFashion"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="43dp"
+        android:layout_marginTop="35dp"
         android:layout_marginEnd="30dp"
         android:text="@string/txt_sub_2"
-        android:textSize="18sp"
+        android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView2" />
+        app:layout_constraintTop_toBottomOf="@+id/txtViewFood" />
 
     <TextView
-        android:id="@+id/textView4"
+        android:id="@+id/txtViewTrans"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="40dp"
+        android:layout_marginTop="35dp"
         android:layout_marginEnd="30dp"
         android:text="@string/txt_sub_2"
-        android:textSize="18sp"
+        android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView3" />
+        app:layout_constraintTop_toBottomOf="@+id/txtViewFashion" />
 
     <TextView
-        android:id="@+id/textView5"
+        android:id="@+id/txtViewUtility"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="45dp"
+        android:layout_marginTop="35dp"
         android:layout_marginEnd="30dp"
         android:text="@string/txt_sub_2"
-        android:textSize="18sp"
+        android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView4" />
+        app:layout_constraintTop_toBottomOf="@+id/txtViewTrans" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

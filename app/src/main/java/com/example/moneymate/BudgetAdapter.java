@@ -1,4 +1,7 @@
 package com.example.moneymate;
+/* this Page created by Walpola S.R.
+ * IT19965550
+ * */
 
 import android.app.Activity;
 import android.content.ContentValues;
@@ -19,11 +22,12 @@ import java.util.ArrayList;
 
 public class BudgetAdapter extends RecyclerView.Adapter<BudgetAdapter.ViewData> {
 
+    //creating variables
     private Context context;
     Activity activity;
     private ArrayList id,des,amount;
 
-
+        //assigning values through constructor
         BudgetAdapter(Activity activity,Context context, ArrayList id, ArrayList des, ArrayList amount) {
         this.activity = activity;
         this.context = context;
@@ -63,7 +67,7 @@ public class BudgetAdapter extends RecyclerView.Adapter<BudgetAdapter.ViewData> 
 
             return id.size();
     }
-
+    //creating class for viewdata
      class ViewData extends RecyclerView.ViewHolder {
 
         TextView id,des,amount;

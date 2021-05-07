@@ -13,6 +13,8 @@
     <color name="btn">#59F9FF</color>
     <color name="btn_txt">#3b3938</color>
     <color name="dlt_txt">#e02a1d</color>
+    <color name="blue">#1325ad</color>
+    <color name="blue2">#3F51B5</color>
 
 
 </resources>

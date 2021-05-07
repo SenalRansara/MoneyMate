@@ -6,7 +6,10 @@
     android:layout_height="wrap_content"
     tools:context=".Food">
 
-
+    <!--
+     this Page created by Walpola S.R.
+    IT19965550
+    -->
 
     <ImageView
         android:id="@+id/imageView2"

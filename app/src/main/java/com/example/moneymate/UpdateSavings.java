@@ -1,4 +1,7 @@
 package com.example.moneymate;
+/* this Page created by Walpola S.R.
+ * IT19965550
+ * */
 
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
@@ -12,6 +15,7 @@ import android.widget.Toast;
 
 public class UpdateSavings extends AppCompatActivity {
 
+    //creating variables
     EditText des,amount;
     Button update_button, delete_button;
 
@@ -22,11 +26,13 @@ public class UpdateSavings extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_update_savings);
 
+        //get the values to variables
         des = findViewById(R.id.editText4);
         amount = findViewById(R.id.editText3);
         update_button = findViewById(R.id.update_btn);
         delete_button = findViewById(R.id.delete_btn);
 
+        //calling the get intent data method
         getIntentData();
 
         update_button.setOnClickListener(new View.OnClickListener() {
@@ -40,6 +46,7 @@ public class UpdateSavings extends AppCompatActivity {
 
             }
         });
+        //set onclicklistner for delete button
         delete_button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -50,7 +57,7 @@ public class UpdateSavings extends AppCompatActivity {
 
 
     }
-
+    //create a method for get intent data
     void getIntentData(){
         if(getIntent().hasExtra("aid") && getIntent().hasExtra("description") && getIntent().hasExtra("amnt")){
 
@@ -68,6 +75,7 @@ public class UpdateSavings extends AppCompatActivity {
         }
     }
 
+    //create a method for popup dialogue box
     void confirmText(){
     AlertDialog.Builder builder = new AlertDialog.Builder(this);
     builder.setTitle("Delete " + description + " ?");
@@ -80,12 +88,14 @@ public class UpdateSavings extends AppCompatActivity {
             finish();
         }
     });
+
     builder.setNegativeButton("No", new DialogInterface.OnClickListener() {
         @Override
         public void onClick(DialogInterface dialog, int which) {
 
         }
     });
+
     builder.create().show();
     }
 }
