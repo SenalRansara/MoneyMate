@@ -9,23 +9,23 @@
     android:textAlignment="center"
     tools:context=".Select_Account">
 
+
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/select_account"
         android:layout_width="match_parent"
         android:layout_height="55dp"
-        android:background="#01C16D"
+        android:background="#5904F1"
         android:minHeight="?attr/actionBarSize"
         android:theme="?attr/actionBarTheme"
         android:touchscreenBlocksFocus="true"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.002"
+        app:layout_constraintVertical_bias="0.001"
         app:titleTextAppearance="@style/TextAppearance.AppCompat.Display1"
         app:titleTextColor="#FFFFFF" />
-
 
     <ImageView
         android:id="@+id/imageView5"
@@ -83,8 +83,8 @@
         android:layout_width="380dp"
         android:layout_height="61dp"
         android:gravity="center"
-        android:text="FROM ACCOUNT"
-        android:textColor="#FFFFFF"
+        android:text="Select Account to Next"
+        android:textColor="#5904F1"
         android:textSize="30sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

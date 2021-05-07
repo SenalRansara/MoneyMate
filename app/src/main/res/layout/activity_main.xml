@@ -14,8 +14,10 @@
         android:alpha="0.12"
         app:layout_constraintBottom_toBottomOf="@+id/Shopping"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.494"
         app:srcCompat="@drawable/moneylogso" />
 
     <ImageButton
@@ -109,7 +111,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView3"
         app:layout_constraintVertical_bias="0.265"
-        app:srcCompat="@mipmap/ic_launcher_cat4" />
+        app:srcCompat="@drawable/ic_baseline_assignment_24" />
 
     <ImageView
         android:id="@+id/imageView"
@@ -121,7 +123,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.053"
-        app:srcCompat="@drawable/ic_launcher_cat1" />
+        app:srcCompat="@drawable/ic_baseline_fastfood_24" />
 
     <ImageView
         android:id="@+id/imageView2"
@@ -133,7 +135,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView"
         app:layout_constraintVertical_bias="0.104"
-        app:srcCompat="@mipmap/ic_launcher_cat2" />
+        app:srcCompat="@drawable/ic_baseline_directions_car_24" />
 
     <ImageView
         android:id="@+id/imageView3"
@@ -145,14 +147,14 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView2"
         app:layout_constraintVertical_bias="0.153"
-        app:srcCompat="@mipmap/ic_launcher_cat3" />
+        app:srcCompat="@drawable/ic_baseline_add_shopping_cart_24" />
 
     <TextView
         android:id="@+id/Currency_type"
         android:layout_width="43dp"
         android:layout_height="47dp"
         android:text="Rs."
-        android:textColor="#000000"
+        android:textColor="#5904F1"
         android:textSize="30sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -166,49 +168,49 @@
         android:layout_width="43dp"
         android:layout_height="47dp"
         android:text="Rs."
-        android:textColor="#000000"
+        android:textColor="#5904F1"
         android:textSize="30sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.331"
         app:layout_constraintStart_toEndOf="@+id/imageView2"
         app:layout_constraintTop_toBottomOf="@+id/Currency_type"
-        app:layout_constraintVertical_bias="0.202" />
+        app:layout_constraintVertical_bias="0.183" />
 
     <TextView
         android:id="@+id/currency_type2"
         android:layout_width="43dp"
         android:layout_height="47dp"
         android:text="Rs."
-        android:textColor="#000000"
+        android:textColor="#5904F1"
         android:textSize="30sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.331"
         app:layout_constraintStart_toEndOf="@+id/imageView3"
         app:layout_constraintTop_toBottomOf="@+id/currency_type"
-        app:layout_constraintVertical_bias="0.265" />
+        app:layout_constraintVertical_bias="0.232" />
 
     <TextView
         android:id="@+id/currency_type3"
         android:layout_width="43dp"
         android:layout_height="47dp"
         android:text="Rs."
-        android:textColor="#000000"
+        android:textColor="#5904F1"
         android:textSize="30sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.331"
         app:layout_constraintStart_toEndOf="@+id/imageView4"
         app:layout_constraintTop_toBottomOf="@+id/currency_type2"
-        app:layout_constraintVertical_bias="0.413" />
+        app:layout_constraintVertical_bias="0.373" />
 
     <TextView
         android:id="@+id/total_food"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="1500.00"
-        android:textColor="#000000"
+        android:textColor="#5904F1"
         android:textSize="36sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -222,48 +224,48 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="1500.00"
-        android:textColor="#000000"
+        android:textColor="#5904F1"
         android:textSize="36sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toEndOf="@+id/currency_type"
         app:layout_constraintTop_toBottomOf="@+id/total_food"
-        app:layout_constraintVertical_bias="0.199" />
+        app:layout_constraintVertical_bias="0.184" />
 
     <TextView
         android:id="@+id/total_shopping"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="1500.00"
-        android:textColor="#000000"
+        android:textColor="#5904F1"
         android:textSize="36sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toEndOf="@+id/currency_type2"
         app:layout_constraintTop_toBottomOf="@+id/total_travel"
-        app:layout_constraintVertical_bias="0.264" />
+        app:layout_constraintVertical_bias="0.227" />
 
     <TextView
         android:id="@+id/total_utility"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="1500.00"
-        android:textColor="#000000"
+        android:textColor="#5904F1"
         android:textSize="36sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toEndOf="@+id/currency_type3"
         app:layout_constraintTop_toBottomOf="@+id/total_shopping"
-        app:layout_constraintVertical_bias="0.411" />
+        app:layout_constraintVertical_bias="0.371" />
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/add_new_expense"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:backgroundTint="#14DC00"
+        android:backgroundTint="#7E1B8F"
         android:clickable="true"
         app:fabCustomSize="56dp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -281,7 +283,7 @@
         android:id="@+id/transaction_history"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:backgroundTint="#14DC00"
+        android:backgroundTint="#7E1B8F"
         android:clickable="true"
         app:fabCustomSize="56dp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -293,6 +295,6 @@
         app:maxImageSize="40dp"
         app:rippleColor="#FFFFFF"
         app:srcCompat="@drawable/ic_baseline_done_all_24"
-        app:tint="@android:color/holo_red_dark" />
+        app:tint="@color/white" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

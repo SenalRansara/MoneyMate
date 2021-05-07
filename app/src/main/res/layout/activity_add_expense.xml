@@ -10,7 +10,7 @@
         android:id="@+id/select_category2"
         android:layout_width="match_parent"
         android:layout_height="55dp"
-        android:background="#01C16D"
+        android:background="#5904F1"
         android:minHeight="?attr/actionBarSize"
         android:theme="?attr/actionBarTheme"
         android:touchscreenBlocksFocus="true"
@@ -72,12 +72,10 @@
         android:textColor="#FF0000"
         android:textColorHint="#FF0000"
         android:textSize="50sp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBaseline_toBaselineOf="@+id/currency"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.914"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/expense"
-        app:layout_constraintVertical_bias="0.214" />
+        app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
         android:id="@+id/currency"
@@ -85,7 +83,7 @@
         android:layout_height="63dp"
         android:gravity="center"
         android:text="Rs."
-        android:textColor="#FF0000"
+        android:textColor="#5904F1"
         android:textSize="50sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -98,38 +96,40 @@
         android:id="@+id/expense"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Expense"
-        android:textColor="#FF0202"
+        android:text="Expense value"
+        android:textColor="#5904F1"
         android:textSize="30sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/select_category2"
-        app:layout_constraintVertical_bias="0.083" />
+        app:layout_constraintTop_toBottomOf="@+id/date"
+        app:layout_constraintVertical_bias="0.221" />
 
     <TextView
         android:id="@+id/date"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Date :"
-        android:textColor="#FFFFFF"
+        android:textColor="#000000"
         android:textSize="30sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/amount"
-        app:layout_constraintVertical_bias="0.25" />
+        app:layout_constraintTop_toBottomOf="@+id/select_category2"
+        app:layout_constraintVertical_bias="0.024" />
 
     <Button
         android:id="@+id/confirm_button"
         android:layout_width="410dp"
         android:layout_height="55dp"
-        android:backgroundTint="#01C16D"
+        android:backgroundTint="#7E1B8F"
+        android:gravity="center|center_vertical"
         android:text="Confirm"
         android:textSize="24sp"
         app:cornerRadius="0dp"
         app:icon="@drawable/ic_baseline_check_24"
-        app:iconGravity="end"
+        app:iconGravity="textEnd"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
@@ -142,14 +142,14 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:autoText="true"
-        android:textColor="#FFFFFF"
+        android:textColor="#000000"
         android:textIsSelectable="false"
         android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/amount"
-        app:layout_constraintVertical_bias="0.468" />
+        app:layout_constraintTop_toBottomOf="@+id/date"
+        app:layout_constraintVertical_bias="0.07" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -15,7 +15,7 @@ public class Select_Account extends AppCompatActivity {
     RecyclerView recyclerView;
 
     Database db;
-    ArrayList<String> accId, accName;
+    ArrayList<String> accId, accName, accType;
     SelectAccountAdapter customAdapter;
 
     @Override
@@ -28,10 +28,11 @@ public class Select_Account extends AppCompatActivity {
         db = new Database(Select_Account.this);
         accId = new ArrayList<>();
         accName = new ArrayList<>();
+        accType = new ArrayList<>();
 
         storeAccDetails();
 
-        customAdapter = new SelectAccountAdapter(Select_Account.this,accId,accName);
+        customAdapter = new SelectAccountAdapter(Select_Account.this,accId,accName,accType);
         recyclerView.setAdapter(customAdapter);
         recyclerView.setLayoutManager(new LinearLayoutManager(Select_Account.this));
     }
@@ -44,6 +45,7 @@ public class Select_Account extends AppCompatActivity {
             while (cursor.moveToNext()){
                 accId.add(cursor.getString(0));
                 accName.add(cursor.getString(1));
+                accType.add(cursor.getString(2));
             }
         }
     }

@@ -12,7 +12,7 @@
         android:id="@+id/select_category"
         android:layout_width="match_parent"
         android:layout_height="55dp"
-        android:background="#673AB7"
+        android:background="#5904F1"
         android:minHeight="?attr/actionBarSize"
         android:theme="?attr/actionBarTheme"
         android:touchscreenBlocksFocus="true"
@@ -71,7 +71,7 @@
         android:layout_marginStart="30dp"
         android:gravity="center"
         android:text="Food"
-        android:textColor="#000000"
+        android:textColor="#5904F1"
         android:textSize="24sp"
         app:layout_constraintBaseline_toBaselineOf="@+id/travel_topic"
         app:layout_constraintEnd_toEndOf="parent"
@@ -80,8 +80,8 @@
 
     <Button
         android:id="@+id/food_select"
-        android:layout_width="135dp"
-        android:layout_height="144dp"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
         android:alpha="0."
         android:backgroundTint="#00000000"
         android:shadowColor="#00FFFFFF"
@@ -93,10 +93,10 @@
         app:cornerRadius="120dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.134"
+        app:layout_constraintHorizontal_bias="0.131"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/food_topic"
-        app:layout_constraintVertical_bias="0.002"
+        app:layout_constraintVertical_bias="0.018"
         app:rippleColor="#00FFFFFF" />
 
     <ImageView
@@ -106,12 +106,12 @@
         android:layout_marginTop="8dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/food_topic"
-        app:srcCompat="@drawable/ic_launcher_cat1" />
+        app:srcCompat="@drawable/ic_baseline_fastfood_24" />
 
     <Button
         android:id="@+id/travel_select"
-        android:layout_width="143dp"
-        android:layout_height="143dp"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
         android:alpha="0"
         android:backgroundTint="#00FFFFFF"
         android:text="Travel"
@@ -120,10 +120,10 @@
         app:iconTint="#FFFFFF"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.525"
+        app:layout_constraintHorizontal_bias="0.475"
         app:layout_constraintStart_toEndOf="@+id/food_select"
         app:layout_constraintTop_toBottomOf="@+id/travel_topic"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintVertical_bias="0.018" />
 
     <Button
         android:id="@+id/shopping_select"
@@ -166,34 +166,34 @@
         android:layout_marginEnd="30dp"
         android:gravity="center"
         android:text="Travel"
-        android:textColor="#000000"
+        android:textColor="#5904F1"
         android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toEndOf="@+id/food_topic"
         app:layout_constraintTop_toBottomOf="@+id/select_category"
-        app:layout_constraintVertical_bias="0.108" />
+        app:layout_constraintVertical_bias="0.172" />
 
     <ImageView
         android:id="@+id/imageView6"
         android:layout_width="150dp"
         android:layout_height="150dp"
         android:layout_marginTop="8dp"
-        android:layout_marginEnd="28dp"
+        android:layout_marginEnd="32dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/travel_select"
-        app:srcCompat="@mipmap/ic_launcher_cat2" />
+        app:layout_constraintTop_toBottomOf="@+id/travel_topic"
+        app:srcCompat="@drawable/ic_baseline_directions_car_24" />
 
     <TextView
         android:id="@+id/shopping_topic"
         android:layout_width="150dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="30dp"
-        android:layout_marginTop="80dp"
+        android:layout_marginTop="60dp"
         android:gravity="center"
         android:text="Shopping"
-        android:textColor="#000000"
+        android:textColor="#5904F1"
         android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
@@ -204,12 +204,12 @@
         android:layout_width="150dp"
         android:layout_height="150dp"
         android:layout_marginStart="32dp"
-        android:layout_marginTop="12dp"
+        android:layout_marginTop="8dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/shopping_topic"
-        app:srcCompat="@mipmap/ic_launcher_cat3" />
+        app:srcCompat="@drawable/ic_baseline_add_shopping_cart_24" />
 
     <TextView
         android:id="@+id/utility_topic"
@@ -217,7 +217,7 @@
         android:layout_height="wrap_content"
         android:gravity="center"
         android:text="Utility Bills"
-        android:textColor="#000000"
+        android:textColor="#5904F1"
         android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -228,10 +228,23 @@
     <ImageView
         android:layout_width="150dp"
         android:layout_height="150dp"
-        android:layout_marginTop="12dp"
+        android:layout_marginTop="4dp"
         android:layout_marginEnd="28dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/utility_topic"
-        app:srcCompat="@mipmap/ic_launcher_cat4" />
+        app:srcCompat="@drawable/ic_baseline_assignment_24" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Choose your category to Next"
+        android:textColor="#5904F1"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/select_category"
+        app:layout_constraintVertical_bias="0.071" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
