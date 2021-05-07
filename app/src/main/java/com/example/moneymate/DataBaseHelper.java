@@ -154,6 +154,30 @@ public class DataBaseHelper extends SQLiteOpenHelper {
 
     }
 
+    ////////
+
+
+    public float sumTotalExpence(){
+
+        SQLiteDatabase db = this.getWritableDatabase();
+        //return(db.execSQL("SELECT SUM ("+ COLUMN_AMOUNT +") FROM " + TABLE_NAME));
+
+        Cursor c2 = db.rawQuery("SELECT SUM (Amount) FROM expenses ",null);
+        c2.moveToFirst();
+        float ex = c2.getFloat(0);
+        c2.close();
+        return ex;
+
+    }
+
+
+
+
+
+
+
+
+//////
     public float remBalance(String accName){
 
         SQLiteDatabase db = this.getWritableDatabase();

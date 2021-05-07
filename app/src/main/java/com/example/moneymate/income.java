@@ -27,6 +27,8 @@ public class income extends AppCompatActivity {
 
     //total income
     TextView txtBalance;
+    TextView txtExp;
+    TextView txtTotRem;
     ImageButton Shopping;
 
 
@@ -49,16 +51,24 @@ public class income extends AppCompatActivity {
         recyclerView = findViewById(R.id.recyclerView);
         add_btn = findViewById(R.id.add_btn);
         txtBalance = findViewById(R.id.txtBalance);
+        txtExp = findViewById(R.id.txtExp);
+        txtTotRem =findViewById(R.id.txtTotRem);
 
         Shopping = findViewById(R.id.Shopping);
 
 
         myDB = new DataBaseHelper(getApplicationContext());
         float total = myDB.sumTotalIncome();
+        float expense = myDB.sumTotalExpence();
+
+        Float Remtot = total - expense;
 
         Log.d("<<<<<<<<<<<<<<<<<<",String.valueOf(total));
+        Log.d(">>>>>>>>",String.valueOf(expense));
 
         txtBalance.setText(String.valueOf(total));
+        txtExp.setText(String.valueOf(expense));
+        txtTotRem.setText(String.valueOf(Remtot));
 
 
         //TOOLBAR BUTTON SET
