@@ -9,7 +9,10 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.MoneyMate">
-        <activity android:name=".UpdateSavings"></activity>
+        <activity android:name=".UpdateSavings"
+            android:label="Update"
+            android:parentActivityName=".Savings"
+            />
         <activity android:name=".Transport" />
         <activity android:name=".Budget" />
         <activity android:name=".Utility" />
