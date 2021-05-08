@@ -6,10 +6,12 @@ package com.example.moneymate;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageButton;
 
 public class AddSavings extends AppCompatActivity {
 
@@ -17,12 +19,16 @@ public class AddSavings extends AppCompatActivity {
     EditText description,amount;
     Button add_btn;
 
+    //creating variables for implement navigation intents
+    ImageButton img_btn_budget,img_btn_savings;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_add_savings);
 
         //get the values to variables
+
         description = findViewById(R.id.editText2);
         amount = findViewById(R.id.editText1);
         add_btn = findViewById(R.id.btn_6);
@@ -35,5 +41,26 @@ public class AddSavings extends AppCompatActivity {
                       amount.getText().toString().trim());
             }
         });
+
+        img_btn_budget = findViewById(R.id.budget);
+        img_btn_savings = findViewById(R.id.savings);
+
+        //creating intents for navigate in between pages by bottom navigation bar
+        img_btn_budget.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent_budget = new Intent(AddSavings.this,Budget.class);
+                startActivity(intent_budget);
+            }
+        });
+
+        img_btn_savings.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent_savings = new Intent(AddSavings.this, Savings.class);
+                startActivity(intent_savings);
+            }
+        });
+
     }
 }

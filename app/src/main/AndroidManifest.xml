@@ -31,7 +31,8 @@
             android:parentActivityName=".Budget" />
 
         <activity android:name=".Savings"
-            android:label="Future Savings"/>
+            android:label="Future Savings"
+            android:parentActivityName=".Savings"/>
 
         <activity
             android:name=".AddSavings"
@@ -41,8 +42,8 @@
         <activity android:name=".MainActivity" />
 
         <activity android:name=".Budget"
-                android:label="Budget"
-                android:parentActivityName=".Budget">
+            android:label="Budget"
+            android:parentActivityName=".Budget">
 
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

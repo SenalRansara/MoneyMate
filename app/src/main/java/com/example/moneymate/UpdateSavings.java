@@ -7,10 +7,12 @@ import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageButton;
 import android.widget.Toast;
 
 public class UpdateSavings extends AppCompatActivity {
@@ -18,6 +20,9 @@ public class UpdateSavings extends AppCompatActivity {
     //creating variables
     EditText des,amount;
     Button update_button, delete_button;
+
+    //creating variables for implement navigation intents
+    ImageButton img_btn_budget,img_btn_savings;
 
     String aid,description,amnt;
 
@@ -31,6 +36,9 @@ public class UpdateSavings extends AppCompatActivity {
         amount = findViewById(R.id.editText3);
         update_button = findViewById(R.id.update_btn);
         delete_button = findViewById(R.id.delete_btn);
+
+        img_btn_budget = findViewById(R.id.budget);
+        img_btn_savings = findViewById(R.id.savings);
 
         //calling the get intent data method
         getIntentData();
@@ -52,6 +60,23 @@ public class UpdateSavings extends AppCompatActivity {
             public void onClick(View view) {
                 confirmText();
 
+            }
+        });
+
+        //creating intents for navigate in between pages by bottom navigation bar
+        img_btn_budget.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent_budget = new Intent(UpdateSavings.this,Budget.class);
+                startActivity(intent_budget);
+            }
+        });
+
+        img_btn_savings.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent_savings = new Intent(UpdateSavings.this, Savings.class);
+                startActivity(intent_savings);
             }
         });
 

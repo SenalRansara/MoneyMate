@@ -10,9 +10,13 @@ import android.database.Cursor;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.TextView;
 
 public class Budget extends AppCompatActivity {
+
+    //creating variables for implement navigation intents
+    ImageButton img_btn_budget,img_btn_savings;
 
     TextView txtFood,txtFashion,txtTransport,txtUtility;
 
@@ -65,6 +69,9 @@ public class Budget extends AppCompatActivity {
         buttonThree = findViewById(R.id.btn_3);
         buttonFour = findViewById(R.id.btn_4);
 
+        img_btn_budget = findViewById(R.id.budget);
+        img_btn_savings = findViewById(R.id.savings);
+
         //implementing the intents for buttons
         buttonOne.setOnClickListener(new View.OnClickListener(){
             @Override
@@ -95,6 +102,23 @@ public class Budget extends AppCompatActivity {
             public void onClick(View v) {
                 Intent intent_04 = new Intent(Budget.this,Utility.class);
                 startActivity(intent_04);
+            }
+        });
+
+        //creating intents for navigate in between pages by bottom navigation bar
+        img_btn_budget.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent_budget = new Intent(Budget.this,Budget.class);
+                startActivity(intent_budget);
+            }
+        });
+
+        img_btn_savings.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent_savings = new Intent(Budget.this, Savings.class);
+                startActivity(intent_savings);
             }
         });
 

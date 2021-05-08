@@ -13,6 +13,7 @@ import android.database.Cursor;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.Toast;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
@@ -20,6 +21,9 @@ import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import java.util.ArrayList;
 
 public class Savings extends AppCompatActivity {
+
+    //creating variables for implement navigation intents
+    ImageButton img_btn_budget,img_btn_savings;
 
     //creating variables
     RecyclerView recyclerView;
@@ -35,6 +39,9 @@ public class Savings extends AppCompatActivity {
         setContentView(R.layout.activity_savings);
 
         //get the values to variables
+        img_btn_budget = findViewById(R.id.budget);
+        img_btn_savings = findViewById(R.id.savings);
+
         recyclerView = findViewById(R.id.recycler);
         add_btn = findViewById(R.id.add_button);
         add_btn.setOnClickListener(new View.OnClickListener(){
@@ -56,6 +63,24 @@ public class Savings extends AppCompatActivity {
         budgetAdapter = new BudgetAdapter(Savings.this,this,id,des,amount);
         recyclerView.setAdapter(budgetAdapter);
         recyclerView.setLayoutManager(new LinearLayoutManager(Savings.this));
+
+        //creating intents for navigate in between pages by bottom navigation bar
+        img_btn_budget.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent_budget = new Intent(Savings.this,Budget.class);
+                startActivity(intent_budget);
+            }
+        });
+
+        img_btn_savings.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent_savings = new Intent(Savings.this, Savings.class);
+                startActivity(intent_savings);
+            }
+        });
+
 
     }
 
@@ -81,5 +106,7 @@ public class Savings extends AppCompatActivity {
             }
         }
     }
+
+
 
 }
