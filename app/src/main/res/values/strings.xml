@@ -1,3 +1,19 @@
 <resources>
     <string name="app_name">MoneyMate</string>
+    <string name="Food">Food</string>
+    <string name="Transport">Transport</string>
+    <string name="Fashion">Fashion</string>
+    <string name="Utility">Utility Bill</string>
+    <string name="head_1">Budget</string>
+    <string name="txt_sub_1">Rs.10000</string>
+    <string name="txt_sub_2">$$$$$</string>
+    <string name="Amount">Amount</string>
+    <string name="Save">Save</string>
+    <string name="Add">Add</string>
+    <string name="Description">Description</string>
+    <string name="Edit">Edit</string>
+    <string name="Update">Update</string>
+    <string name="Delete">Delete</string>
+
+
 </resources>
