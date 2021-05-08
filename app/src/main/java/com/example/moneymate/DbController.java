@@ -151,9 +151,7 @@ public class DbController extends SQLiteOpenHelper {
             Toast.makeText(context, "data insertion failed", Toast.LENGTH_SHORT).show();
         }else{
             Toast.makeText(context, "added successfully", Toast.LENGTH_SHORT).show();
-            /*Intent intent = new Intent(context,AddMeal.class);
-            intent.putExtra("retValue", result);
-            context.sendBroadcast(intent);*/
+
         }
 
     }
@@ -173,9 +171,7 @@ public class DbController extends SQLiteOpenHelper {
             Toast.makeText(context, "data insertion failed", Toast.LENGTH_SHORT).show();
         }else{
             Toast.makeText(context, "added successfully", Toast.LENGTH_SHORT).show();
-            /*Intent intent = new Intent(context,AddMeal.class);
-            intent.putExtra("retValue", result);
-            context.sendBroadcast(intent);*/
+
         }
 
     }
@@ -192,9 +188,7 @@ public class DbController extends SQLiteOpenHelper {
             Toast.makeText(context, "data insertion failed", Toast.LENGTH_SHORT).show();
         }else{
             Toast.makeText(context, "added successfully", Toast.LENGTH_SHORT).show();
-            /*Intent intent = new Intent(context,AddMeal.class);
-            intent.putExtra("retValue", result);
-            context.sendBroadcast(intent);*/
+
         }
     }
 
@@ -211,9 +205,7 @@ public class DbController extends SQLiteOpenHelper {
             Toast.makeText(context, "data insertion failed", Toast.LENGTH_SHORT).show();
         }else{
             Toast.makeText(context, "added successfully", Toast.LENGTH_SHORT).show();
-            /*Intent intent = new Intent(context,AddMeal.class);
-            intent.putExtra("retValue", result);
-            context.sendBroadcast(intent);*/
+
         }
     }
 
