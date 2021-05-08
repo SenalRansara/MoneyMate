@@ -31,7 +31,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="64dp"
                 android:text="Category"
-                android:textColor="#5904F1"
+                android:textColor="#3F51B5"
                 android:textSize="20sp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
@@ -42,7 +42,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="228dp"
                 android:text="Rs."
-                android:textColor="#5904F1"
+                android:textColor="#3F51B5"
                 android:textSize="30sp"
                 app:layout_constraintBaseline_toBaselineOf="@+id/totAmount"
                 app:layout_constraintStart_toStartOf="@+id/exId" />
@@ -55,7 +55,7 @@
                 android:layout_marginTop="8dp"
                 android:paddingBottom="3dp"
                 android:text="Acc"
-                android:textColor="#5904F1"
+                android:textColor="#3F51B5"
                 android:textSize="18sp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/catName" />
