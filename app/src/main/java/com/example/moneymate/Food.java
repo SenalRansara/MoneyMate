@@ -1,6 +1,10 @@
 package com.example.moneymate;
-/* this Page created by Walpola S.R.
+
+/** this Page created by Walpola S.R.
  * IT19965550
+ * MoneyMate
+ * Set Budget and add Savings
+ * Team Androiders
  * */
 
 import androidx.appcompat.app.AppCompatActivity;

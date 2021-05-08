@@ -7,6 +7,15 @@
     android:layout_height="80dp"
     android:id="@+id/mainLayout">
 
+    <!--
+this Page created by Walpola S.R.
+* IT19965550
+* MoneyMate
+* Set Budget and add Savings
+* Team Androiders
+*
+-->
+
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

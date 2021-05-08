@@ -1,7 +1,11 @@
 package com.example.moneymate;
-/* this Page created by Walpola S.R.
-* IT19965550
-* */
+
+/** this Page created by Walpola S.R.
+ * IT19965550
+ * MoneyMate
+ * Set Budget and add Savings
+ * Team Androiders
+ * */
 
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -32,6 +36,7 @@ public class AddSavings extends AppCompatActivity {
         description = findViewById(R.id.editText2);
         amount = findViewById(R.id.editText1);
         add_btn = findViewById(R.id.btn_6);
+
         //implementing the add button
         add_btn.setOnClickListener(new View.OnClickListener() {
             @Override

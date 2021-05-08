@@ -1,6 +1,10 @@
 package com.example.moneymate;
-/* this Page created by Walpola S.R.
+
+/** this Page created by Walpola S.R.
  * IT19965550
+ * MoneyMate
+ * Set Budget and add Savings
+ * Team Androiders
  * */
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -72,7 +76,7 @@ public class Budget extends AppCompatActivity {
         img_btn_budget = findViewById(R.id.budget);
         img_btn_savings = findViewById(R.id.savings);
 
-        //implementing the intents for buttons
+        //implementing the intents for Food Button
         buttonOne.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v) {
@@ -81,6 +85,7 @@ public class Budget extends AppCompatActivity {
             }
         });
 
+        //implementing the intents for Fashion Button
         buttonTwo.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v) {
@@ -89,6 +94,7 @@ public class Budget extends AppCompatActivity {
             }
         });
 
+        //implementing the intents for Transport Button
         buttonThree.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v) {
@@ -97,6 +103,7 @@ public class Budget extends AppCompatActivity {
             }
         });
 
+        //implementing the intents for Utility Button
         buttonFour.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v) {
