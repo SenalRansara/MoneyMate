@@ -61,14 +61,14 @@ public class income extends AppCompatActivity {
         float total = myDB.sumTotalIncome();
         float expense = myDB.sumTotalExpence();
 
-        Float Remtot = total - expense;
-
-        Log.d("<<<<<<<<<<<<<<<<<<",String.valueOf(total));
-        Log.d(">>>>>>>>",String.valueOf(expense));
-
-        txtBalance.setText(String.valueOf(total));
-        txtExp.setText(String.valueOf(expense));
-        txtTotRem.setText(String.valueOf(Remtot));
+//        Float Remtot = total - expense;
+//
+//        Log.d("<<<<<<<<<<<<<<<<<<",String.valueOf(total));
+//        Log.d(">>>>>>>>",String.valueOf(expense));
+//
+//        txtBalance.setText(String.valueOf(total));
+//        txtExp.setText(String.valueOf(expense));
+//        txtTotRem.setText(String.valueOf(Remtot));
 
 
         //TOOLBAR BUTTON SET
