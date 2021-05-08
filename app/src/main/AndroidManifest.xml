@@ -12,13 +12,12 @@
         <activity android:name=".Update"></activity>
 
 
-
-
         <activity android:name=".add_new_expense" />
         <activity android:name=".Choose_category" />
             <activity android:name=".Select_Account" />
         <activity android:name=".TransactionList" />
-        <activity android:name=".MainActivity" />
+
+
         <activity android:name=".UpdateSavings"
             android:label="Update"
             android:parentActivityName=".Savings"
@@ -49,11 +48,11 @@
             android:label="Add"
             android:parentActivityName=".Savings" />
 
-        <activity android:name=".MainActivity" />
-
         <activity android:name=".Budget"
             android:label="Budget"
-            android:parentActivityName=".Budget">
+            android:parentActivityName=".Budget"/>
+
+        <activity android:name=".MainActivity" >
 
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

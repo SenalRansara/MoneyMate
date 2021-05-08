@@ -20,7 +20,7 @@ import android.widget.TextView;
 public class Budget extends AppCompatActivity {
 
     //creating variables for implement navigation intents
-    ImageButton img_btn_budget,img_btn_savings;
+    ImageButton img_btn_budget,img_btn_savings,expenseMenu;
 
     TextView txtFood,txtFashion,txtTransport,txtUtility;
 
@@ -75,6 +75,17 @@ public class Budget extends AppCompatActivity {
 
         img_btn_budget = findViewById(R.id.budget);
         img_btn_savings = findViewById(R.id.savings);
+
+        expenseMenu = findViewById(R.id.expenseMenu);
+
+        //TOOLBAR BUTTON SET
+        expenseMenu.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(Budget.this, MainActivity.class);
+                startActivity(intent);
+            }
+        });
 
         //implementing the intents for Food Button
         buttonOne.setOnClickListener(new View.OnClickListener(){

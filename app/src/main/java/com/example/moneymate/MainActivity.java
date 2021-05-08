@@ -7,6 +7,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.widget.ImageButton;
 import android.widget.TextView;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
@@ -14,9 +15,13 @@ import com.google.android.material.floatingactionbutton.FloatingActionButton;
 public class MainActivity extends AppCompatActivity {
 
     TextView total_food,total_travel,total_shopping,total_utility;
+    ImageButton budgetMenu,savingMenu;
 
     RecyclerView recyclerView;
     FloatingActionButton add_new_expense,transaction_history;
+
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -43,6 +48,31 @@ public class MainActivity extends AppCompatActivity {
         total_travel.setText(String.valueOf(totTravel));
         total_shopping.setText(String.valueOf(totShopping));
         total_utility.setText(String.valueOf(totUtility));
+
+
+
+        budgetMenu = findViewById(R.id.budgetMenu);
+
+        //TOOLBAR BUTTON SET
+        budgetMenu.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, Budget.class);
+                startActivity(intent);
+            }
+        });
+
+        savingMenu = findViewById(R.id.savingMenu);
+
+        //TOOLBAR BUTTON SET
+        savingMenu.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, Savings.class);
+                startActivity(intent);
+            }
+        });
+
 
         add_new_expense.setOnClickListener(new View.OnClickListener() {
             @Override

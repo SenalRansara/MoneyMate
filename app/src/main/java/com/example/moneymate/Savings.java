@@ -27,7 +27,7 @@ import java.util.ArrayList;
 public class Savings extends AppCompatActivity {
 
     //creating variables for implement navigation intents
-    ImageButton img_btn_budget,img_btn_savings;
+    ImageButton img_btn_budget,img_btn_savings,expenseMenu;
 
     //creating variables
     RecyclerView recyclerView;
@@ -48,7 +48,21 @@ public class Savings extends AppCompatActivity {
 
         recyclerView = findViewById(R.id.recycler);
         add_btn = findViewById(R.id.add_button);
+
+        expenseMenu = findViewById(R.id.expenseMenu);
+
+        //TOOLBAR BUTTON SET
+        expenseMenu.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(Savings.this, MainActivity.class);
+                startActivity(intent);
+            }
+        });
+
+
         add_btn.setOnClickListener(new View.OnClickListener(){
+
             @Override
             public void onClick(View v) {
                 Intent intent_05 = new Intent(Savings.this, AddSavings.class);

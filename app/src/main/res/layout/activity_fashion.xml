@@ -98,7 +98,7 @@ this Page created by Walpola S.R.
         app:srcCompat="@drawable/ic_baseline_attach_money_24" />
 
     <ImageButton
-        android:id="@+id/travel"
+        android:id="@+id/expenseMenu"
         android:layout_width="82dp"
         android:layout_height="60dp"
         android:background="#FFEB3B"
@@ -141,7 +141,7 @@ this Page created by Walpola S.R.
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toEndOf="@+id/travel"
+        app:layout_constraintStart_toEndOf="@+id/expenseMenu"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="1.0"
         app:srcCompat="@drawable/ic_baseline_calculate_24" />
