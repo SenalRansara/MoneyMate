@@ -21,6 +21,7 @@ import java.util.ArrayList;
 public class CustomAdapter extends RecyclerView.Adapter <CustomAdapter.MyViewHolder> {
 
 
+    //CustomAdapter
     private Context context;
     Activity activity;
 
