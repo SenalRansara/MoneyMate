@@ -84,7 +84,7 @@
         app:layout_constraintTop_toBottomOf="@+id/textView7" />
 
     <ImageButton
-        android:id="@+id/incomeMenu"
+        android:id="@+id/incomeMenu1"
         android:layout_width="82dp"
         android:layout_height="60dp"
         android:background="#3F51B5"
@@ -110,7 +110,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toEndOf="@+id/incomeMenu"
+        app:layout_constraintStart_toEndOf="@+id/incomeMenu1"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="1.0"
         app:srcCompat="@drawable/ic_baseline_add_chart_24" />
@@ -127,13 +127,13 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toEndOf="@+id/Shopping"
+        app:layout_constraintStart_toEndOf="@+id/incomeMenu3"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="1.0"
         app:srcCompat="@drawable/ic_money_bag" />
 
     <ImageButton
-        android:id="@+id/Shopping"
+        android:id="@+id/incomeMenu3"
         android:layout_width="82dp"
         android:layout_height="60dp"
         android:background="#FFEB3B"
@@ -159,7 +159,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.993"
-        app:layout_constraintStart_toEndOf="@+id/Shopping"
+        app:layout_constraintStart_toEndOf="@+id/incomeMenu3"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="1.0"
         app:srcCompat="@drawable/ic_money" />

@@ -29,7 +29,7 @@ public class income extends AppCompatActivity {
     TextView txtBalance;
     TextView txtExp;
     TextView txtTotRem;
-    ImageButton Shopping;
+    ImageButton calculateMenu,budgetMenu,savingMenu,expenseMenu;
 
 
     RecyclerView recyclerView;
@@ -54,21 +54,22 @@ public class income extends AppCompatActivity {
         txtExp = findViewById(R.id.txtExp);
         txtTotRem =findViewById(R.id.txtTotRem);
 
-        Shopping = findViewById(R.id.Shopping);
+//        Shopping = findViewById(R.id.calculateMenu);
 
 
         myDB = new DataBaseHelper(getApplicationContext());
         float total = myDB.sumTotalIncome();
         float expense = myDB.sumTotalExpence();
 
-//        Float Remtot = total - expense;
-//
-//        Log.d("<<<<<<<<<<<<<<<<<<",String.valueOf(total));
-//        Log.d(">>>>>>>>",String.valueOf(expense));
-//
-//        txtBalance.setText(String.valueOf(total));
-//        txtExp.setText(String.valueOf(expense));
-//        txtTotRem.setText(String.valueOf(Remtot));
+        Float Remtot = calcTotal(total,expense);
+
+
+        Log.d("<<<<<<<<<<<<<<<<<<",String.valueOf(total));
+        Log.d(">>>>>>>>",String.valueOf(expense));
+
+        txtBalance.setText(String.valueOf(total));
+        txtExp.setText(String.valueOf(expense));
+        txtTotRem.setText(String.valueOf(Remtot));
 
 
         //TOOLBAR BUTTON SET
@@ -79,6 +80,50 @@ public class income extends AppCompatActivity {
 //                startActivity(intent);
 //            }
 //        });
+
+        expenseMenu = findViewById(R.id.incomeMenu2);
+
+        //TOOLBAR BUTTON SET
+        expenseMenu.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(income.this, MainActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        budgetMenu = findViewById(R.id.incomeMenu4);
+
+        //TOOLBAR BUTTON SET
+        budgetMenu.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(income.this, Budget.class);
+                startActivity(intent);
+            }
+        });
+
+        savingMenu = findViewById(R.id.incomeMenu5);
+
+        //TOOLBAR BUTTON SET
+        savingMenu.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(income.this, Savings.class);
+                startActivity(intent);
+            }
+        });
+
+        calculateMenu = findViewById(R.id.incomeMenu3);
+
+        //TOOLBAR BUTTON SET
+        calculateMenu.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(income.this, Budget.class);
+                startActivity(intent);
+            }
+        });
 
         add_btn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -188,4 +233,10 @@ public class income extends AppCompatActivity {
         builder.create().show();
 
     }
+
+
+    public Float calcTotal(float tot, float exp){
+        return tot - exp;
+    }
+
 }
