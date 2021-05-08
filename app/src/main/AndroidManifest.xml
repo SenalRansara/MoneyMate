@@ -4,56 +4,20 @@
 
     <application
         android:allowBackup="true"
-        android:icon="@mipmap/ic_launcher"
+        android:icon="@mipmap/moneyapplogo"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.MoneyMate">
-        <activity android:name=".Update"></activity>
-
-
-        <activity android:name=".add_new_expense" />
-        <activity android:name=".Choose_category" />
-            <activity android:name=".Select_Account" />
-        <activity android:name=".TransactionList" />
-
-
-        <activity android:name=".UpdateSavings"
-            android:label="Update"
-            android:parentActivityName=".Savings"
+        <activity android:name=".Update_Account"
+           android:parentActivityName=".income"
             />
-        <activity android:name=".Fashion"
-            android:label="Fashion"
-            android:parentActivityName=".Budget" />
-
         <activity
-            android:name=".Utility"
-            android:label="Utility"
-            android:parentActivityName=".Budget" />
-
-        <activity android:name=".Transport"
-            android:label="Transport"
-            android:parentActivityName=".Budget" />
-
-        <activity android:name=".Food"
-            android:label="Food"
-            android:parentActivityName=".Budget" />
-
-        <activity android:name=".Savings"
-            android:label="Future Savings"
-            android:parentActivityName=".Savings"/>
-
-        <activity
-            android:name=".AddSavings"
-            android:label="Add"
-            android:parentActivityName=".Savings" />
-
-        <activity android:name=".Budget"
-            android:label="Budget"
-            android:parentActivityName=".Budget"/>
-
-        <activity android:name=".MainActivity" >
-
+            android:name=".new_Account"
+            android:label="New Account"
+            android:parentActivityName=".income" />
+        <activity android:name=".income"
+            android:label =" MoneyMate">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
