@@ -34,6 +34,8 @@ public class DataBaseHelper extends SQLiteOpenHelper {
         this.context=context;
     }
 
+
+
     //on create method
     //create table-sql statement
     //column id auto incrementing
