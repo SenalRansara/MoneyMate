@@ -134,6 +134,7 @@ public class Budget extends AppCompatActivity {
             }
         });
 
+        buttonOne = findViewById(R.id.btn_1);
         //implementing the intents for Food Button
         buttonOne.setOnClickListener(new View.OnClickListener(){
             @Override
@@ -143,6 +144,7 @@ public class Budget extends AppCompatActivity {
             }
         });
 
+        buttonTwo = findViewById(R.id.btn_2);
         //implementing the intents for Fashion Button
         buttonTwo.setOnClickListener(new View.OnClickListener(){
             @Override
@@ -152,6 +154,7 @@ public class Budget extends AppCompatActivity {
             }
         });
 
+        buttonThree = findViewById(R.id.btn_3);
         //implementing the intents for Transport Button
         buttonThree.setOnClickListener(new View.OnClickListener(){
             @Override
@@ -161,6 +164,7 @@ public class Budget extends AppCompatActivity {
             }
         });
 
+        buttonFour = findViewById(R.id.btn_4);
         //implementing the intents for Utility Button
         buttonFour.setOnClickListener(new View.OnClickListener(){
             @Override

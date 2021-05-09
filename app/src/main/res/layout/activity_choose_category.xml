@@ -8,6 +8,7 @@
     android:foregroundTint="#FFFFFF"
     tools:context=".Choose_category">
 
+
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/select_category"
         android:layout_width="match_parent"
@@ -18,13 +19,12 @@
         android:touchscreenBlocksFocus="true"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.002"
+        app:layout_constraintVertical_bias="0.0"
         app:titleTextAppearance="@style/TextAppearance.AppCompat.Display1"
         app:titleTextColor="#FFFFFF" />
-
 
     <ImageView
         android:id="@+id/imageView5"
@@ -41,13 +41,13 @@
     <ImageView
         android:id="@+id/category_logo"
         android:layout_width="68dp"
-        android:layout_height="55dp"
+        android:layout_height="50dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.125"
+        app:layout_constraintHorizontal_bias="0.139"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.002"
+        app:layout_constraintVertical_bias="0.01"
         app:srcCompat="@drawable/ic_baseline_category_24" />
 
     <TextView

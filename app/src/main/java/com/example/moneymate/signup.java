@@ -51,6 +51,8 @@ public class signup extends AppCompatActivity {
                 boolean var = myDB.registerUser(usernameSignUp.getText().toString(), emailSignUp.getText().toString(),passwordSignUp.getText().toString());
                 if (var){
                     Toast.makeText(signup.this,"User Registered Successfully !!", Toast.LENGTH_SHORT).show();
+                    Intent intent = new Intent(signup.this, login.class);
+                    startActivity(intent);
                 }
                 else
                     Toast.makeText(signup.this,"Registration Error !!" , Toast.LENGTH_SHORT).show();

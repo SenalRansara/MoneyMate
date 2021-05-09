@@ -6,6 +6,8 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
@@ -19,6 +21,8 @@ public class TransactionAdapter extends RecyclerView.Adapter<TransactionAdapter.
     private Context context;
     private ArrayList exId,exCategory,exAccount,exAmount;
     int position;
+
+    Animation display_anim;
 
     TransactionAdapter(Context context, ArrayList exId, ArrayList exCategory, ArrayList exAccount, ArrayList exAmount){
 
@@ -75,6 +79,9 @@ public class TransactionAdapter extends RecyclerView.Adapter<TransactionAdapter.
             exAccount = itemView.findViewById(R.id.accType);
             exAmount = itemView.findViewById(R.id.totAmount);
             transaction_layout = itemView.findViewById(R.id.transaction_layout);
+
+            display_anim = AnimationUtils.loadAnimation(context, R.anim.display_anim);
+            transaction_layout.setAnimation(display_anim);
         }
     }
 }

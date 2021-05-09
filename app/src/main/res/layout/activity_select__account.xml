@@ -13,7 +13,8 @@
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/select_account"
         android:layout_width="match_parent"
-        android:layout_height="55dp"
+        android:layout_height="56dp"
+        android:layout_marginTop="-1dp"
         android:background="#3F51B5"
         android:minHeight="?attr/actionBarSize"
         android:theme="?attr/actionBarTheme"
@@ -23,7 +24,7 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.001"
+        app:layout_constraintVertical_bias="0.0"
         app:titleTextAppearance="@style/TextAppearance.AppCompat.Display1"
         app:titleTextColor="#FFFFFF" />
 
@@ -42,13 +43,13 @@
     <ImageView
         android:id="@+id/account_logo"
         android:layout_width="68dp"
-        android:layout_height="55dp"
+        android:layout_height="50dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.125"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.002"
+        app:layout_constraintVertical_bias="0.01"
         app:srcCompat="@drawable/ic_baseline_account_balance_24" />
 
     <TextView

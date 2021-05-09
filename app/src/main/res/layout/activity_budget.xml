@@ -202,12 +202,11 @@ this Page created by Walpola S.R.
         android:tint="@color/btn_txt"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.993"
+        app:layout_constraintHorizontal_bias="0.987"
         app:layout_constraintStart_toEndOf="@+id/budgetMenu3"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="1.0"
         app:srcCompat="@drawable/ic_money" />
-
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

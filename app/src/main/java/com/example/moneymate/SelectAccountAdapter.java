@@ -6,6 +6,8 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -20,6 +22,8 @@ public class SelectAccountAdapter extends RecyclerView.Adapter<SelectAccountAdap
     private Context context;
     private ArrayList accId,accName,accType;
     int position;
+
+    Animation display_anim;
 
     SelectAccountAdapter(Context context, ArrayList accId, ArrayList accName, ArrayList accType){
 
@@ -70,6 +74,10 @@ public class SelectAccountAdapter extends RecyclerView.Adapter<SelectAccountAdap
             accName = itemView.findViewById(R.id.catName);
             accType = itemView.findViewById(R.id.acc_type);
             mainLayout = itemView.findViewById(R.id.mainLayout);
+
+            //Recycle View Animation
+            display_anim = AnimationUtils.loadAnimation(context, R.anim.display_anim);
+            mainLayout.setAnimation(display_anim);
         }
     }
 }
