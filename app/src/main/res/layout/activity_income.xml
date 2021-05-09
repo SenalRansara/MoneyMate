@@ -79,6 +79,7 @@
         android:id="@+id/add_btn"
         android:layout_width="52dp"
         android:layout_height="62dp"
+        android:backgroundTint="#3F51B5"
         android:text="+"
         android:textSize="30sp"
         app:cornerRadius="100dp"
@@ -129,7 +130,7 @@
         android:backgroundTint="#3F51B5"
         android:fadingEdge="none"
         android:scaleType="center"
-        android:tint="#000000"
+        android:tint="#FFFFFF"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
@@ -145,7 +146,7 @@
         android:background="#FFEB3B"
         android:backgroundTint="#3F51B5"
         android:fadingEdge="none"
-        android:tint="#000000"
+        android:tint="#FFFFFF"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
@@ -154,9 +155,10 @@
         app:layout_constraintVertical_bias="1.0"
         app:srcCompat="@drawable/ic_baseline_calculate_24" />
 
+
     <ImageButton
         android:id="@+id/incomeMenu5"
-        android:layout_width="82dp"
+        android:layout_width="84dp"
         android:layout_height="54dp"
         android:background="#FFEB3B"
         android:backgroundTint="#3F51B5"
@@ -164,12 +166,11 @@
         android:tint="#FFFFFF"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.993"
-        app:layout_constraintStart_toEndOf="@+id/budgetMenu3"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/incomeMenu4"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="1.0"
         app:srcCompat="@drawable/ic_money" />
-
 
     <TextView
         android:id="@+id/txtBalance"
