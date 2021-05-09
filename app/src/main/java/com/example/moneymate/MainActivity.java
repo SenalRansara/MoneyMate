@@ -11,12 +11,10 @@ import android.widget.TextView;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
-import com.example.moneymate.R;
-
 public class MainActivity extends AppCompatActivity {
 
     TextView total_food,total_travel,total_shopping,total_utility;
-    ImageButton budgetMenu,savingMenu,incomeMenu;
+    ImageButton budgetMenu,savingMenu,incomeMenu,calculateMenu;
 
     RecyclerView recyclerView;
     FloatingActionButton add_new_expense,transaction_history;
@@ -50,13 +48,24 @@ public class MainActivity extends AppCompatActivity {
         total_shopping.setText(String.valueOf(totShopping));
         total_utility.setText(String.valueOf(totUtility));
 
-        incomeMenu = findViewById(R.id.incomeMenu1);
+        incomeMenu = findViewById(R.id.budgetMenu1);
 
         //TOOLBAR BUTTON SET
         incomeMenu.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(MainActivity.this, income.class);
+                startActivity(intent);
+            }
+        });
+
+        calculateMenu = findViewById(R.id.budgetMenu3);
+
+        //TOOLBAR BUTTON SET
+        calculateMenu.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, CurrencyConverter.class);
                 startActivity(intent);
             }
         });

@@ -3,6 +3,7 @@ package com.example.moneymate;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.app.Dialog;
+import android.content.Intent;
 import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextWatcher;
@@ -11,6 +12,7 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageButton;
 import android.widget.ListView;
 import android.widget.TextView;
 
@@ -31,6 +33,7 @@ import java.util.Arrays;
 
 public class CurrencyConverter extends AppCompatActivity {
 
+    ImageButton incomeMenu,expenseMenu,calculateMenu,budgetMenu,savingMenu;
     TextView convertFromDropdownTextView, convertToDropdownTextView, conversionRateText;
     EditText amountToConvert;
     ArrayList<String> arrayList;
@@ -46,6 +49,63 @@ public class CurrencyConverter extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_currency_converter);
 
+        //Nav bar
+        incomeMenu = findViewById(R.id.currencyMenu1);
+
+        //TOOLBAR BUTTON SET
+        incomeMenu.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(CurrencyConverter.this, MainActivity.class);
+                startActivity(intent);
+            }
+        });
+
+
+        expenseMenu = findViewById(R.id.currencyMenu2);
+
+        //TOOLBAR BUTTON SET
+        expenseMenu.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(CurrencyConverter.this, MainActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        calculateMenu = findViewById(R.id.currencyMenu3);
+
+        //TOOLBAR BUTTON SET
+        calculateMenu.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(CurrencyConverter.this, CurrencyConverter.class);
+                startActivity(intent);
+            }
+        });
+
+        budgetMenu = findViewById(R.id.currencyMenu4);
+
+        //TOOLBAR BUTTON SET
+        budgetMenu.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(CurrencyConverter.this, Budget.class);
+                startActivity(intent);
+            }
+        });
+
+        savingMenu = findViewById(R.id.currencyMenu5);
+
+        //TOOLBAR BUTTON SET
+        savingMenu.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(CurrencyConverter.this, Savings.class);
+                startActivity(intent);
+            }
+        });
+
         convertFromDropdownTextView = findViewById(R.id.convert_from_dropdown_menu);
         convertToDropdownTextView = findViewById(R.id.convert_to_dropdown_menu);
         convertButton = findViewById(R.id.conversionButton);
@@ -54,6 +114,7 @@ public class CurrencyConverter extends AppCompatActivity {
 
         arrayList = new ArrayList<>();
         arrayList.addAll(Arrays.asList(currency));
+
 
         convertFromDropdownTextView.setOnClickListener(new View.OnClickListener() {
             @Override

@@ -82,7 +82,7 @@ this Page created by Walpola S.R.
         app:layout_constraintTop_toBottomOf="@+id/textView3" />
 
     <ImageButton
-        android:id="@+id/incomeMenu1"
+        android:id="@+id/budgetMenu1"
         android:layout_width="82dp"
         android:layout_height="60dp"
         android:background="#3F51B5"
@@ -98,7 +98,7 @@ this Page created by Walpola S.R.
         app:srcCompat="@drawable/ic_baseline_attach_money_24" />
 
     <ImageButton
-        android:id="@+id/expenseMenu"
+        android:id="@+id/budgetMenu2"
         android:layout_width="82dp"
         android:layout_height="60dp"
         android:background="#FFEB3B"
@@ -108,13 +108,13 @@ this Page created by Walpola S.R.
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toEndOf="@+id/incomeMenu1"
+        app:layout_constraintStart_toEndOf="@+id/budgetMenu1"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="1.0"
         app:srcCompat="@drawable/ic_baseline_add_chart_24" />
 
     <ImageButton
-        android:id="@+id/budget"
+        android:id="@+id/budgetMenu4"
         android:layout_width="82dp"
         android:layout_height="60dp"
         android:background="#FFEB3B"
@@ -125,13 +125,13 @@ this Page created by Walpola S.R.
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toEndOf="@+id/incomeMenu3"
+        app:layout_constraintStart_toEndOf="@+id/budgetMenu3"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="1.0"
         app:srcCompat="@drawable/ic_money_bag" />
 
     <ImageButton
-        android:id="@+id/incomeMenu3"
+        android:id="@+id/budgetMenu3"
         android:layout_width="82dp"
         android:layout_height="60dp"
         android:background="#FFEB3B"
@@ -141,13 +141,13 @@ this Page created by Walpola S.R.
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toEndOf="@+id/expenseMenu"
+        app:layout_constraintStart_toEndOf="@+id/budgetMenu2"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="1.0"
         app:srcCompat="@drawable/ic_baseline_calculate_24" />
 
     <ImageButton
-        android:id="@+id/savings"
+        android:id="@+id/budgetMenu5"
         android:layout_width="82dp"
         android:layout_height="60dp"
         android:background="#FFEB3B"
@@ -157,7 +157,7 @@ this Page created by Walpola S.R.
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.993"
-        app:layout_constraintStart_toEndOf="@+id/incomeMenu3"
+        app:layout_constraintStart_toEndOf="@+id/budgetMenu3"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="1.0"
         app:srcCompat="@drawable/ic_money" />

@@ -114,13 +114,13 @@ public class income extends AppCompatActivity {
             }
         });
 
-        calculateMenu = findViewById(R.id.incomeMenu3);
+        calculateMenu = findViewById(R.id.budgetMenu3);
 
         //TOOLBAR BUTTON SET
         calculateMenu.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(income.this, Budget.class);
+                Intent intent = new Intent(income.this, CurrencyConverter.class);
                 startActivity(intent);
             }
         });

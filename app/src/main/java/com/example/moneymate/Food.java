@@ -37,8 +37,8 @@ public class Food extends AppCompatActivity {
         btnAdd = findViewById(R.id.btnFoodAdd);
         btnEdit = findViewById(R.id.btnFoodEdit);
 
-        img_btn_budget = findViewById(R.id.budget);
-        img_btn_savings = findViewById(R.id.savings);
+        img_btn_budget = findViewById(R.id.budgetMenu4);
+        img_btn_savings = findViewById(R.id.budgetMenu5);
 
         //set onclicklistner for save button
         btnAdd.setOnClickListener(new View.OnClickListener() {

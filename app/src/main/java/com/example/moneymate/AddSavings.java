@@ -47,8 +47,8 @@ public class AddSavings extends AppCompatActivity {
             }
         });
 
-        img_btn_budget = findViewById(R.id.budget);
-        img_btn_savings = findViewById(R.id.savings);
+        img_btn_budget = findViewById(R.id.budgetMenu4);
+        img_btn_savings = findViewById(R.id.budgetMenu5);
 
         //creating intents for navigate in between pages by bottom navigation bar
         img_btn_budget.setOnClickListener(new View.OnClickListener() {

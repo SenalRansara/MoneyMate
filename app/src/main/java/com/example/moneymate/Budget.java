@@ -20,7 +20,7 @@ import android.widget.TextView;
 public class Budget extends AppCompatActivity {
 
     //creating variables for implement navigation intents
-    ImageButton img_btn_budget,img_btn_savings,expenseMenu;
+    ImageButton img_btn_budget,img_btn_savings,incomeMenu,expenseMenu,calculateMenu,budgetMenu,savingMenu;
 
     TextView txtFood,txtFashion,txtTransport,txtUtility;
 
@@ -68,21 +68,68 @@ public class Budget extends AppCompatActivity {
 
 
         //linking the buttons for navigate between pages
-        buttonOne = findViewById(R.id.btn_1);
-        buttonTwo = findViewById(R.id.btn_2);
-        buttonThree = findViewById(R.id.btn_3);
-        buttonFour = findViewById(R.id.btn_4);
+        incomeMenu = findViewById(R.id.budgetMenu1);
+        expenseMenu = findViewById(R.id.budgetMenu2);
+        calculateMenu = findViewById(R.id.budgetMenu3);
+        budgetMenu = findViewById(R.id.budgetMenu4);
+        savingMenu = findViewById(R.id.budgetMenu5);
 
-        img_btn_budget = findViewById(R.id.budget);
-        img_btn_savings = findViewById(R.id.savings);
+        img_btn_budget = findViewById(R.id.budgetMenu4);
+        img_btn_savings = findViewById(R.id.budgetMenu5);
 
-        expenseMenu = findViewById(R.id.expenseMenu);
+
+        incomeMenu = findViewById(R.id.budgetMenu1);
+
+        //TOOLBAR BUTTON SET
+        incomeMenu.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(Budget.this, MainActivity.class);
+                startActivity(intent);
+            }
+        });
+
+
+        expenseMenu = findViewById(R.id.budgetMenu2);
 
         //TOOLBAR BUTTON SET
         expenseMenu.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(Budget.this, MainActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        calculateMenu = findViewById(R.id.budgetMenu3);
+
+        //TOOLBAR BUTTON SET
+        calculateMenu.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(Budget.this, CurrencyConverter.class);
+                startActivity(intent);
+            }
+        });
+
+        budgetMenu = findViewById(R.id.budgetMenu4);
+
+        //TOOLBAR BUTTON SET
+        budgetMenu.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(Budget.this, Budget.class);
+                startActivity(intent);
+            }
+        });
+
+        savingMenu = findViewById(R.id.budgetMenu5);
+
+        //TOOLBAR BUTTON SET
+        savingMenu.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(Budget.this, Savings.class);
                 startActivity(intent);
             }
         });

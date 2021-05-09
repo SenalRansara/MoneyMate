@@ -8,7 +8,7 @@
     tools:context=".MainActivity">
 
     <ImageButton
-        android:id="@+id/incomeMenu1"
+        android:id="@+id/budgetMenu1"
         android:layout_width="82dp"
         android:layout_height="54dp"
         android:background="#3F51B5"
@@ -24,7 +24,7 @@
         app:srcCompat="@drawable/ic_baseline_attach_money_24" />
 
     <ImageButton
-        android:id="@+id/expenseMenu"
+        android:id="@+id/budgetMenu2"
         android:layout_width="82dp"
         android:layout_height="54dp"
         android:background="#FFEB3B"
@@ -34,7 +34,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toEndOf="@+id/incomeMenu1"
+        app:layout_constraintStart_toEndOf="@+id/budgetMenu1"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="1.0"
         app:srcCompat="@drawable/ic_baseline_addchart_24" />
@@ -51,13 +51,13 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toEndOf="@+id/incomeMenu3"
+        app:layout_constraintStart_toEndOf="@+id/budgetMenu3"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="1.0"
         app:srcCompat="@drawable/ic_money_bag" />
 
     <ImageButton
-        android:id="@+id/incomeMenu3"
+        android:id="@+id/budgetMenu3"
         android:layout_width="82dp"
         android:layout_height="54dp"
         android:background="#3F51B5"
@@ -67,7 +67,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toEndOf="@+id/expenseMenu"
+        app:layout_constraintStart_toEndOf="@+id/budgetMenu2"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="1.0"
         app:srcCompat="@drawable/ic_baseline_calculate_24" />
@@ -82,8 +82,8 @@
         android:tint="#000000"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.993"
-        app:layout_constraintStart_toEndOf="@+id/incomeMenu3"
+        app:layout_constraintHorizontal_bias="0.987"
+        app:layout_constraintStart_toEndOf="@+id/budgetMenu3"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="1.0"
         app:srcCompat="@drawable/ic_money" />
@@ -105,12 +105,12 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:alpha="0.12"
-        app:layout_constraintBottom_toBottomOf="@+id/incomeMenu3"
+        app:layout_constraintBottom_toBottomOf="@+id/budgetMenu3"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0"
+        app:layout_constraintVertical_bias="1.0"
         app:srcCompat="@drawable/moneylogso" />
 
     <TextView

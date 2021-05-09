@@ -41,8 +41,8 @@ public class UpdateSavings extends AppCompatActivity {
         update_button = findViewById(R.id.update_btn);
         delete_button = findViewById(R.id.delete_btn);
 
-        img_btn_budget = findViewById(R.id.budget);
-        img_btn_savings = findViewById(R.id.savings);
+        img_btn_budget = findViewById(R.id.budgetMenu4);
+        img_btn_savings = findViewById(R.id.budgetMenu5);
 
         //calling the get intent data method
         getIntentData();

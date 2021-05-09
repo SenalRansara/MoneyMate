@@ -11,7 +11,6 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -36,8 +35,8 @@ public class Utility extends AppCompatActivity {
         btnAdd = findViewById(R.id.btnUtilityAdd);
         btnEdit = findViewById(R.id.btnUtilityEdit);
 
-        img_btn_budget = findViewById(R.id.budget);
-        img_btn_savings = findViewById(R.id.savings);
+        img_btn_budget = findViewById(R.id.budgetMenu4);
+        img_btn_savings = findViewById(R.id.budgetMenu5);
 
         //set onclicklistner for save button
         btnAdd.setOnClickListener(new View.OnClickListener() {

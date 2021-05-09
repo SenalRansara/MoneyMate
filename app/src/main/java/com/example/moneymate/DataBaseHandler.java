@@ -1,5 +1,6 @@
 package com.example.moneymate;
 
+import android.accounts.Account;
 import android.content.ContentValues;
 import android.content.Context;
 import android.database.Cursor;
@@ -11,12 +12,21 @@ import androidx.annotation.Nullable;
 
 public class DataBaseHandler extends SQLiteOpenHelper {
 
-    private static final String DATABASE_NAME = "USER_RECORD";
+    private static final String DATABASE_NAME = "MoneyMate.db"; //USER_RECORD
     private static final String TABLE_NAME = "USER_DATA";
     private static final String COL_1 = "ID";
     private static final String COL_2 = "USERNAME";
     private static final String COL_3 = "EMAIL";
     private static final String COL_4 = "PASSWORD";
+
+    public static final String queryExpense = "CREATE TABLE " + "expenses" +
+            "(" + "Id" + " INTEGER PRIMARY KEY AUTOINCREMENT," +
+            "Category" + " TEXT," + "Account" + " TEXT," + "Date" + " DATE, " + "Amount" + " NUMERIC(5,2));" ;
+
+    public static final String queryIncome = "CREATE TABLE " + "Income " + " (" + "Account_id" + " INTEGER PRIMARY KEY AUTOINCREMENT," +
+            "Account_Name" + " TEXT," +
+            "Account_Type" + " TEXT," +
+            "Account_Amount" + " TEXT);";
 
     public DataBaseHandler(@Nullable Context context) {
         super(context, DATABASE_NAME, null, 1);
@@ -25,7 +35,8 @@ public class DataBaseHandler extends SQLiteOpenHelper {
     @Override
     public void onCreate(SQLiteDatabase db) {
         db.execSQL("CREATE TABLE IF NOT EXISTS "+TABLE_NAME + "(ID INTEGER PRIMARY KEY AUTOINCREMENT , USERNAME TEXT UNIQUE, EMAIL TEXT, PASSWORD TEXT)");
-
+        db.execSQL(queryExpense);
+        db.execSQL(queryIncome);
     }
 
     @Override

@@ -35,8 +35,8 @@ public class Transport extends AppCompatActivity {
         btnAdd = findViewById(R.id.btnTransportAdd);
         btnEdit = findViewById(R.id.btnTransportEdit);
 
-        img_btn_budget = findViewById(R.id.budget);
-        img_btn_savings = findViewById(R.id.savings);
+        img_btn_budget = findViewById(R.id.budgetMenu4);
+        img_btn_savings = findViewById(R.id.budgetMenu5);
 
         //set onclicklistner for save button
         btnAdd.setOnClickListener(new View.OnClickListener() {
