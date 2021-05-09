@@ -24,7 +24,7 @@ public class DataBaseHelper extends SQLiteOpenHelper {
     private static final String COLUMN_ID ="Account_id";
     private static final String COLUMN_TITLE="Account_Name";
     private static final String COLUMN_TYPE ="Account_Type";
-    private static final String COLUMN_AMOUNT ="Amount";
+    private static final String COLUMN_AMOUNT ="Account_Amount";
 
 
     //constructor
