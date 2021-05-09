@@ -16,9 +16,24 @@
     <string name="conversion_rate">Conversion Rate</string>
     <string name="convert">Convert</string>
     <string name="sign_up">Sign Up</string>
-    <string name="password">Password</string>
     <string name="i_agreed_to_the_terms_and_conditions">I agreed to the Terms and Conditions</string>
     <string name="Tocontinue">Continue</string>
     <string name="have_an_account">Have an Account?</string>
     <string name="User_name">Username</string>
+    <string name="MoneyMateLogo">MoneyMateLogo</string>
+    <string name="user_name">User Name</string>
+    <string name="password">Password</string>
+    <string name="retype_password">Retype Password</string>
+    <string name="register">Register</string>
+    <string name="already_have_an_account_go_to_sign_in">Already have an account? Go to Sign In</string>
+    <string name="Forgot_Password">Forgot Password?</string>
+    <string name="Enter_Username">Enter username</string>
+    <string name="password_activity_username">User Name</string>
+    <string name="Reset_password">Reset Password</string>
+    <string name="Retype_password">Retype password</string>
+    <string name="Confirm">Confirm</string>
+    <string name="Enter_password">Enter Password</string>
+    <string name="ReEnter_password">ReType</string>
+    <string name="Hometext">Manage your personal finance and acheive your financial goals</string>
+    <string name="Welcome">Welcome</string>
 </resources>

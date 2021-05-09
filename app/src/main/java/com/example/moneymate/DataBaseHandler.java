@@ -8,6 +8,7 @@ import android.database.sqlite.SQLiteOpenHelper;
 
 import androidx.annotation.Nullable;
 
+
 public class DataBaseHandler extends SQLiteOpenHelper {
 
     private static final String DATABASE_NAME = "USER_RECORD";
@@ -23,7 +24,7 @@ public class DataBaseHandler extends SQLiteOpenHelper {
 
     @Override
     public void onCreate(SQLiteDatabase db) {
-        db.execSQL("CREATE TABLE IF NOT EXISTS "+TABLE_NAME + "(ID INTEGER PRIMARY KEY AUTOINCREMENT , USERNAME TEXT, EMAIL TEXT, PASSWORD TEXT)");
+        db.execSQL("CREATE TABLE IF NOT EXISTS "+TABLE_NAME + "(ID INTEGER PRIMARY KEY AUTOINCREMENT , USERNAME TEXT UNIQUE, EMAIL TEXT, PASSWORD TEXT)");
 
     }
 
@@ -45,6 +46,18 @@ public class DataBaseHandler extends SQLiteOpenHelper {
 
     }
 
+    public boolean updatepassword(String username , String password){
+        SQLiteDatabase db = this.getWritableDatabase();
+        ContentValues values = new ContentValues();
+        values.put(COL_4, password);
+
+        long result = db.update(TABLE_NAME ,values , "USERNAME =?", new String[] {username} );
+        return result != -1;
+
+    }
+
+
+
     public boolean checkUser(String username , String password){
         SQLiteDatabase db = this.getWritableDatabase();
         String [] columns = { COL_1 };
@@ -58,5 +71,31 @@ public class DataBaseHandler extends SQLiteOpenHelper {
 
     }
 
-}
 
+    public Boolean checkusername(String username) {
+        SQLiteDatabase MyDB = this.getWritableDatabase();
+        String [] columns = { COL_1 };
+        String selection = COL_2 + "=?";
+        String [] selectionargs = {username};
+        Cursor cursor = MyDB.query(TABLE_NAME , columns , selection , selectionargs , null,null,null);
+        int count = cursor.getCount();
+        cursor.close();
+        return cursor.getCount() > 0;
+
+    }
+
+
+
+    //Cursor SearchUser(String username){
+    //    String query = "SELECT * FROM " + TABLE_NAME + " WHERE USERNAME LIKE " + "'" + username + "'";
+    //    SQLiteDatabase db = this.getWritableDatabase();
+    //    Cursor cursor = null;
+    //    if(db != null){
+    //        cursor = db.rawQuery(query,null);
+    //    }if (cursor.getCount() == 0){
+    //        Toast.makeText(context,"Sorry no data found!",Toast.LENGTH_SHORT).show();
+    //    }
+    //    return cursor;
+    //}
+
+}

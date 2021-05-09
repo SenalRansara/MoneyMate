@@ -12,7 +12,7 @@
     android:paddingEnd="10dp"
     android:paddingRight="10dp"
     android:paddingBottom="10dp"
-    tools:context=".MainActivity">
+    tools:context=".signup">
 
 
     <ImageView
@@ -29,7 +29,7 @@
         app:layout_constraintHorizontal_bias="0.811"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.221"
+        app:layout_constraintVertical_bias="0.051"
         app:srcCompat="@drawable/moneylogso"
         tools:visibility="visible" />
 
@@ -37,7 +37,7 @@
         android:id="@+id/textView6"
         android:layout_width="164dp"
         android:layout_height="65dp"
-        android:layout_marginTop="52dp"
+        android:layout_marginTop="30dp"
         android:padding="10dp"
         android:paddingStart="10dp"
         android:paddingLeft="10dp"
@@ -60,7 +60,6 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="50dp"
-        android:layout_marginTop="30dp"
         android:background="@drawable/button_background"
         android:drawablePadding="@dimen/cardview_compat_inset_shadow"
         android:padding="10dp"
@@ -84,7 +83,7 @@
         android:layout_marginEnd="52dp"
         android:ems="10"
         android:inputType="textPersonName"
-        android:textColor="@color/design_default_color_error"
+        android:textColor="@color/white"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView12" />
@@ -96,7 +95,7 @@
         android:layout_marginEnd="52dp"
         android:ems="10"
         android:inputType="textEmailAddress"
-        android:textColor="@color/design_default_color_error"
+        android:textColor="@color/white"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView7" />
@@ -131,7 +130,7 @@
         android:layout_marginEnd="52dp"
         android:ems="10"
         android:inputType="textPassword"
-        android:textColor="@color/design_default_color_error"
+        android:textColor="@color/white"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView8" />
@@ -155,10 +154,9 @@
         android:layout_width="347dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="5dp"
         android:layout_marginEnd="32dp"
         android:layout_marginBottom="90dp"
-        android:alpha="@dimen/cardview_default_elevation"
         android:background="@drawable/button_background"
         android:ellipsize="end"
         android:text="@string/Tocontinue"
@@ -171,22 +169,23 @@
 
     <TextView
         android:id="@+id/textView10"
-        android:layout_width="0dp"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="72dp"
+        android:layout_marginStart="50dp"
         android:text="@string/have_an_account"
         android:textAlignment="center"
         android:textAppearance="@style/TextAppearance.AppCompat.Body2"
         android:textColor="@color/white"
         android:textSize="18sp"
         app:layout_constraintBaseline_toBaselineOf="@+id/BackToSignin"
+        app:layout_constraintEnd_toStartOf="@+id/BackToSignin"
         app:layout_constraintStart_toStartOf="parent" />
 
     <Button
         android:id="@+id/BackToSignin"
         android:layout_width="82dp"
         android:layout_height="55dp"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="20dp"
         android:layout_marginEnd="8dp"
         android:background="@drawable/button_background"
         android:hint="@string/sign_in"
@@ -207,7 +206,7 @@
         android:layout_marginStart="50dp"
         android:layout_marginTop="40dp"
         android:layout_marginBottom="40dp"
-        android:background="@color/grey"
+        android:background="@drawable/button_background"
         android:padding="10dp"
         android:paddingStart="10dp"
         android:paddingLeft="10dp"
